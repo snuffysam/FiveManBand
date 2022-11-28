@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class BattleRunner : MonoBehaviour
 {
+    public List<BattleData> allBattles;
     public BattleData battleData;
     public Slider hypeMeter;
     public Image hypePlayer;
@@ -23,6 +24,7 @@ public class BattleRunner : MonoBehaviour
     public AudioSource playerMusic, enemyMusic;
     public GameObject tempVictoryPanel;
     public TextMeshProUGUI tempVictoryText;
+    public RawImage playerLogoUI, enemyLogoUI;
 
     private List<GameObject> spawnedPlayers = new List<GameObject>();
     private List<GameObject> spawnedEnemies = new List<GameObject>();
@@ -44,16 +46,32 @@ public class BattleRunner : MonoBehaviour
     private int playerStars;
     private int enemyStars;
     private List<GameObject> starIcons = new List<GameObject>();
+    private bool isMusicIntro = true;
+    int indexToForce = -1;
     // Start is called before the first frame update
     void Start()
     {
+        BattleMessage[] bm = FindObjectsOfType<BattleMessage>();
+        foreach (BattleMessage battleMessage in bm){
+            FindBattle(battleMessage.message);
+            Destroy(battleMessage.gameObject);
+        }
+
         foreach (MusicianData md in battleData.playerTeam){
-            spawnedPlayers.Add(Instantiate<GameObject>(md.gameObject));
+            GameObject go = Instantiate<GameObject>(md.gameObject);
+            spawnedPlayers.Add(go);
+            go.GetComponent<MusicianData>().startTime = battleData.startTime;
+            go.GetComponent<MusicianData>().bpm = battleData.musicBPM;
+            go.GetComponent<MusicianData>().musicBox = playerMusic;
         }
         PlaceTeam(spawnedPlayers, true);
 
         foreach (MusicianData md in battleData.enemyTeam){
-            spawnedEnemies.Add(Instantiate<GameObject>(md.gameObject));
+            GameObject go = Instantiate<GameObject>(md.gameObject);
+            spawnedEnemies.Add(go);
+            go.GetComponent<MusicianData>().startTime = battleData.startTime;
+            go.GetComponent<MusicianData>().bpm = battleData.musicBPM;
+            go.GetComponent<MusicianData>().musicBox = playerMusic;
         }
         PlaceTeam(spawnedEnemies, false);
 
@@ -77,25 +95,53 @@ public class BattleRunner : MonoBehaviour
             AudienceSprites[i].sprite = battleData.audienceSprites[i];
         }
 
-        playerMusic.clip = battleData.playerMusic;
-        enemyMusic.clip = battleData.enemyMusic;
+        playerMusic.clip = battleData.playerMusic[0];
+        enemyMusic.clip = battleData.enemyMusic[0];
+        playerMusic.loop = false;
+        enemyMusic.loop = false;
         playerMusic.Play();
         enemyMusic.Play();
+
+        if (battleData.playerLogo == null){
+            playerLogoUI.texture = FindObjectOfType<TextureStorer>().storedTexture;
+        } else {
+            playerLogoUI.texture = battleData.playerLogo;
+        }
+
+        if (battleData.enemyLogo == null){
+            enemyLogoUI.texture = FindObjectOfType<TextureStorer>().storedTexture;
+        } else {
+            enemyLogoUI.texture = battleData.enemyLogo;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         float score = GetScore();
-        playerMusic.volume = (score+1)/2f;
-        enemyMusic.volume = (1-score)/2f;
-        Debug.Log("score: " + score);
+        playerMusic.volume = (score+1)*TextBoxControl.musicVolume/2f;
+        enemyMusic.volume = (1-score)*TextBoxControl.musicVolume/2f;
+        if (isMusicIntro && !playerMusic.isPlaying){
+            isMusicIntro = false;
+
+            playerMusic.clip = battleData.playerMusic[1];
+            enemyMusic.clip = battleData.enemyMusic[1];
+            playerMusic.loop = true;
+            enemyMusic.loop = true;
+            playerMusic.Play();
+            enemyMusic.Play();
+        }
 
         if (!takeAnyActions){
             return;
         }
 
         if (canShowSelect){
+            while (indexToForce > -1 && indexToForce != currentPlayerIndex){
+                ProgressTurn();
+            }
+            indexToForce = -1;
+            //Debug.Log("index to force: " + indexToForce + ", current player index: " + currentPlayerIndex);
             selectUI.SetActive(true);
             spawnedPlayers[currentPlayerIndex].GetComponent<MusicianData>().SetBonusStars(playerBonus);
             for (int i = 0; i < ButtonTexts.Length; i++){
@@ -116,13 +162,7 @@ public class BattleRunner : MonoBehaviour
         } else {
             selectUI.SetActive(false);
             if (spawnedPlayers[currentPlayerIndex].GetComponent<MusicianData>().IsNextTurn()){
-                canShowSelect = true;
-                spawnedPlayers[currentPlayerIndex].GetComponent<MusicianData>().ResetTurn();
-                currentPlayerIndex = NextPlayerIndex(currentPlayerIndex);
-                AssignPortraits();
-                alreadySelected = false;
-                ResetStars();
-                SpawnStars();
+                ProgressTurn();
             }
         }
 
@@ -137,7 +177,21 @@ public class BattleRunner : MonoBehaviour
             StartCoroutine("LoseBattle");
             takeAnyActions = false;
         }
+
+        //Debug.Log("bonus: " + playerBonus + ", " + playerStars);
         //add health when that's a factor...
+    }
+
+    public void ProgressTurn(){
+        //Debug.Log("skipping turn " + currentPlayerIndex);
+        canShowSelect = true;
+        spawnedPlayers[currentPlayerIndex].GetComponent<MusicianData>().ResetTurn();
+        currentPlayerIndex = NextPlayerIndex(currentPlayerIndex);
+        //Debug.Log("skipping turn " + currentPlayerIndex);
+        AssignPortraits();
+        alreadySelected = false;
+        ResetStars();
+        SpawnStars();
     }
 
     void EnemyAI(){
@@ -198,15 +252,51 @@ public class BattleRunner : MonoBehaviour
     }
 
     IEnumerator WinBattle(){
-        yield return new WaitForSeconds(1f);
-        tempVictoryPanel.SetActive(true);
-        tempVictoryText.text = "You Win!";
+        playerMusic.clip = battleData.playerMusic[2];
+        enemyMusic.clip = battleData.enemyMusic[2];
+        playerMusic.loop = false;
+        enemyMusic.loop = false;
+        playerMusic.Play();
+        enemyMusic.Play();
+        yield return new WaitForSeconds(0.1f);
+        while (playerMusic.isPlaying || enemyMusic.isPlaying){
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        if (battleData.winGoTo.Length == 0){
+            tempVictoryPanel.SetActive(true);
+            tempVictoryText.text = "You Win!";
+        } else {
+            SummonBattleMessage(battleData.winGoTo);
+        }
     }
 
     IEnumerator LoseBattle(){
-        yield return new WaitForSeconds(1f);
-        tempVictoryPanel.SetActive(true);
-        tempVictoryText.text = "You Lose!";
+        playerMusic.clip = battleData.playerMusic[2];
+        enemyMusic.clip = battleData.enemyMusic[2];
+        playerMusic.loop = false;
+        enemyMusic.loop = false;
+        playerMusic.Play();
+        enemyMusic.Play();
+        yield return new WaitForSeconds(0.1f);
+        while (playerMusic.isPlaying || enemyMusic.isPlaying){
+            yield return new WaitForSeconds(0.1f);
+        }
+        yield return new WaitForSeconds(0.5f);
+
+        if (battleData.loseGoTo.Length == 0){
+            tempVictoryPanel.SetActive(true);
+            tempVictoryText.text = "You Lose!";
+        } else {
+            SummonBattleMessage(battleData.loseGoTo);
+        }
+    }
+
+    void SummonBattleMessage(string message){
+        GameObject go = new GameObject("Battle Message");
+        go.AddComponent<BattleMessage>().message = message;
+        SceneManager.LoadScene("VisualNovelScene");
     }
 
     public void AssignPortraits(){
@@ -285,7 +375,7 @@ public class BattleRunner : MonoBehaviour
 
     IEnumerator StartBattleCO()
     {
-        yield return new WaitForSeconds(battleData.startTime);
+        yield return new WaitForSeconds(battleData.delayTime);
         canShowSelect = true;
         currentEnemyIndex = 0;
     }
@@ -296,6 +386,7 @@ public class BattleRunner : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         playerStars -= playerBonus;
         playerBonus = 0;
+        enemyAITimer = (enemyAITimer+battleData.AIDelay)/2.0f;
         canShowSelect = false;
     }
 
@@ -427,7 +518,7 @@ public class BattleRunner : MonoBehaviour
             shieldList = enemyShields;
         }
 
-        if (shieldList.Count >= row*2-1){
+        if (shieldList.Count >= row*1){
             return;
         }
 
@@ -528,5 +619,25 @@ public class BattleRunner : MonoBehaviour
         }
 
         return score;
+    }
+
+    void FindBattle(string battleName){
+        if (battleData != null){
+            return;
+        }
+        foreach (BattleData bData in allBattles){
+            if (battleName == bData.battleName){
+                battleData = bData;
+                break;
+            }
+        }
+    }
+
+    public int GetCurrentHype(){
+        return currentHype;
+    }
+
+    public void ForcePlayerIndex(int index){
+        indexToForce = index;
     }
 }

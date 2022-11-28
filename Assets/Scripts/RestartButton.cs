@@ -8,7 +8,6 @@ public class RestartButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,6 +17,9 @@ public class RestartButton : MonoBehaviour
     }
 
     public void ReloadScene(){
+        BattleRunner bRunner = FindObjectOfType<BattleRunner>();
+        GameObject go = new GameObject("Battle Message");
+        go.AddComponent<BattleMessage>().message = bRunner.battleData.battleName;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

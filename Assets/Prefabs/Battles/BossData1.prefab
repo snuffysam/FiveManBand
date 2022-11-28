@@ -1,0 +1,243 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8694931719232253829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: AIDelay
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: winGoTo
+      value: Ch1_22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: musicBPM
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: delayTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyLogo
+      value: 
+      objectReference: {fileID: 2800000, guid: d7f52c599a35a41aaa80bb21666dea83, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: startTime
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: totalHype
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: battleName
+      value: BossIvytonne
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 29b59044b16f343e1a62e913a624d764, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyHealth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: dc36c2a9f1501482988b4d006c61877c, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: stageHeight
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.b
+      value: 0.5660378
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.g
+      value: 0.20558918
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.r
+      value: 0.36478728
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: startingHype
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.b
+      value: 0.046991818
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.g
+      value: 0.046991818
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.r
+      value: 0.9056604
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: backgroundSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f872237146514400c9d7ea73e60d1105, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[0]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: 442885bec58e84f538eb36a2bcfe3264, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[1]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: 417166b2af92647e28ed87ff7fc968ae, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[2]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: 59bcea2b67b4544abbd4f307d49458b9, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[3]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: 8337c1139fb004fda9aaaea21d406d8a, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[4]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: 63cdab9f4ae6a4d3fb848aa7430065b7, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42182ac3375534dc0a7cbdf733af6ec6, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: df0842fa785ed408fa6ed10d8650b2b9, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d988f17f3ec3a4f83bb3f538b6312d22, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[0]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: ffbedc4a4194945639e8f3483d9074fe, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[1]
+      value: 
+      objectReference: {fileID: 6682136602065119060, guid: 07af4d27e5a044930a7789b45576a1ce, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[2]
+      value: 
+      objectReference: {fileID: 3398242706144648373, guid: cdc7a2d85af8c4e059454b9fa5808d3d, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[3]
+      value: 
+      objectReference: {fileID: 1361079444049766038, guid: 3485cbdee843840479410f40e36baaac, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[4]
+      value: 
+      objectReference: {fileID: 1239562112572115579, guid: d0cac28ce6b5b445f9876730cbf53889, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 42182ac3375534dc0a7cbdf733af6ec6, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: f327312fafc08462684b4c89e36f36d8, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0c9b8d9a09d9a4e25a6664e14a946c78, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: audienceSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 337348c0aa3ec4810b82f9bcdef0e993, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: audienceSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: c1c9ee2954c194e3ab27bd043a77ef58, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: audienceSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: ecb7ad6e0bf0f4f889a74f04045723e7, type: 3}
+    - target: {fileID: 5747577153169543375, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_Name
+      value: BossData1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}

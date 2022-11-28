@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8958803248899593787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543369, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: AIDelay
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: winGoTo
+      value: Ch1_18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: loseGoTo
+      value: Ch1_19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: musicBPM
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: delayTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: startTime
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: totalHype
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: battleName
+      value: TestTutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 29b59044b16f343e1a62e913a624d764, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: dc36c2a9f1501482988b4d006c61877c, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: stageHeight
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.b
+      value: 0.44955194
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.g
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyColor.r
+      value: 0.41798684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: startingHype
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: backgroundSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 595e3e66155ba4b2091bfea0c003a69d, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[0]
+      value: 
+      objectReference: {fileID: 3776192628877792148, guid: a7350f1e68ae540e488f0cbc034e7106, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyTeam.Array.data[1]
+      value: 
+      objectReference: {fileID: 1586375283624313339, guid: fed0ec3c44496439caa03fdece618e87, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d03dcc5a3c07f4fdf9c2144ba24f7956, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: enemyMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: d8c540346919c4efe9f0b226a0063d05, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[0]
+      value: 
+      objectReference: {fileID: 6673289576839647713, guid: ffbedc4a4194945639e8f3483d9074fe, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerTeam.Array.data[1]
+      value: 
+      objectReference: {fileID: 3398242706144648373, guid: cdc7a2d85af8c4e059454b9fa5808d3d, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 97952b780591746a3a065e1e94ebcc56, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c81f2fa5c92f4f5ab9847117d428323, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: playerMusic.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1530ac72dc9634e689ca562c1be90b6f, type: 3}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: audienceSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: audienceSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 070f92aee9c1c447fa0beb615faeba1e, type: 3}
+    - target: {fileID: 5747577153169543375, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
+      propertyPath: m_Name
+      value: TutorialTestBattleData
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}

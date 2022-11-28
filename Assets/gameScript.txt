@@ -1,0 +1,662 @@
+﻿@Ch1_1
+>SETDATA, HideRoderick2, 1
+>SETDATA, DisableBolts, 1
+>SETDATA, ClickedRoderick, 0
+>SETDATA, CollectedBolts, 0
+>SETDATA, ClickedPurse, 0
+>SETDATA, ClickedSweatband, 0
+>SETDATA, ClickedKouta, 0
+>SETDATA, ClickedDrum, 0
+>SETDATA, ClickedEliana, 0
+>BACKGROUND, BlackBackground, 0
+>CHARACTER, na, L1, 0
+>CHARACTER, na, L2, 0
+>CHARACTER, na, R1, 0
+>CHARACTER, na, R2, 0
+>TYPESFX, Narrator, 0
+>OPEN
+: The following content is intended for 18+ audiences only, due to mature language and scenarios.
+>CLOSE
+>MUSIC, Tempting Secrets, 500
+>PAUSE, 1000
+>OPEN
+RODERICK: This world is a world of ENERGY.
+RODERICK: This is a power that is capable of creating life... and bringing death.
+RODERICK: The wielders of this ENERGY can control the hearts of all they meet.
+RODERICK: Soon, young lady, thou shalt wield this ENERGY.
+RODERICK: But first...
+RODERICK: What is thy name?
+>CLOSE
+>CHANGENAME, Maria, Ch1_2, Name Our Leader!, Maria_talksprite_neutral, 15
+
+@Ch1_2
+>OPEN
+RODERICK: ...[Maria]... A fine name for a fine warrior.
+RODERICK: [Maria], thou are about to step into a place of unimaginable power. Keep a level head, and a strong heart, and thou shalt conquer the world.
+RODERICK: But lose your rhythm for even one second... and thou shalt be eliminated. Are thou ready for the responsibility?
+ELIANA: Oh, c'mon Roderick, quit scaring her!
+>SFX, Activate Glyph Forcefield, 500
+>MUSIC, na, 500
+>CLOSE
+>PAUSE, 500
+>BACKGROUND, StageBackgroundEarly, 500
+>MUSIC, Carpe_Diem, 500
+>PAUSE, 500
+>OPEN
+: [Maria] peers around a darkened auditorium, at Upper Lake River University. Instruments litter the stage, and a spotlight on the ceiling flickers.
+>CHARACTER, Roderick_talksprite_stoic, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+RODERICK: I am only trying to prepare her for the war to come, Eliana. Is that such a bad thing?
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+>CHARACTER, Eliana_talksprite_happy, L2, 250
+ELIANA: I'm so so so so glad you agreed to join our band, [Maria]! We've really been struggling a lot since our old guitarist... uhh...
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+>CHARACTER, Eliana_talksprite_concerned_close, L2, 0
+RODERICK: Since the Iguana Incident.
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+>CHARACTER, Eliana_talksprite_concerned, L2, 0
+ELIANA: The Iguana Incident, yeah.
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+ELIANA: But now, I just know... with you on the squad, we'll win the statewide collegiate Battle of the Five-Man Bands competition, I'm sure of it!
+ELIANA: I promise you, [Maria], you'll have a ton of fun here!
+>CHARACTER, Roderick_talksprite_angry, L1, 0
+>CHARACTER, Maria_talksprite_concerned, R1, 0
+>CHARACTER, Eliana_talksprite_concerned_close, L2, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+RODERICK: Hmph. “The Battle of the Five-Man Bands” is not about fun. It is about honor, and pride, and making your opponent suffer! Only the strongest formation can rise to the top of the pack!
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+ELIANA: Oh, of course! But that doesn't mean you can't have fun while doing it!
+>CHARACTER, Maria_talksprite_neutral, R1, 0
+ELIANA: Anyway, [Maria], the rest of the band should be back soon, they just left to finish some errands...!
+>CHARACTER, Eliana_talksprite_happy_close, L2, 0
+: A young man bursts through the door to the auditorium. His black hair is wild with energy, and he's slightly out of breath – although it is unclear if this is new, or if this is his default state.
+>CHARACTER, Kouta_talksprite_happy, R2, 250
+KOUTA: You rang?
+>CHARACTER, Kouta_talksprite_happy_close, R2, 0
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+ELIANA: Oh, Kouta, you're here! Where's Felisha?
+>CHARACTER, Kouta_talksprite_happy, R2, 0
+>CHARACTER, Eliana_talksprite_happy_close, L2, 0
+KOUTA: She said she had to say goodbye to her boyfriend. I think he's visiting his family for the weekend?
+>CHARACTER, Kouta_talksprite_happy_close, R2, 0
+>CHARACTER, Eliana_talksprite_concerned, L2, 0
+ELIANA: Well then, what took YOU so long?
+>CHARACTER, Kouta_talksprite_happy, R2, 0
+>CHARACTER, Eliana_talksprite_concerned_close, L2, 0
+KOUTA: Oh! Felisha asked me to fill up her boyfriend's car for him, since it's a long drive. And y'know, I like to be a good friend-
+>CHARACTER, Kouta_talksprite_happy_close, R2, 0
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+RODERICK: ...You filled it up with gas, correct?
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+>CHARACTER, Kouta_talksprite_thinking, R2, 0
+KOUTA: What? No, dummy! I filled it up with liquid! Not sure how Felisha's boyfriend is gonna breathe in there, but I figure he's one of those new fishmen...
+>CHARACTER, Kouta_talksprite_thinking_close, R2, 0
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+ELIANA: Well, I guess until Felisha gets back, we can't do much except wait around. I just hope we have at least some time to practice before tonight's big concert...
+>CHARACTER, Eliana_talksprite_happy_close, L2, 0
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+RODERICK: [Maria]... I propose you use this time to get the lay of the land. To win a battle, one must be deeply familiar with the battlefield!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>BACKGROUND, na, 500
+>OPTIONS, PickCh1_1
+
+@Ch1_3
+>OPEN
+: Roderick is staring upwards, at the lights hanging over the stage.
+>CHARACTER, Roderick_talksprite_angry, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+RODERICK: It's a disgrace... an utter shame upon this great university!
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+RODERICK: Oh, hello, [Maria]. I was just remarking on the state of this support beam. Three bolts are loose... and if they aren't attended to, that heavy spotlight could fall at any moment!
+>CHARACTER, Roderick_talksprite_angry, L1, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+RODERICK: I am Roderick, eldest son of the McNormous line! I left my home country and travelled over 5,000 kilometres to attend Upper Lake River University! And... this is how the school treats its facilities?! It's a fucking disgrace, I tell you!
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+RODERICK: I would fix it myself, of course, but my fingers are too strong and muscular to handle the bolts. This requires a delicate touch...
+>SETDATA, ClickedRoderick, 1
+>SETDATA, DisableBolts, 0
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+
+@Ch1_4
+>SETDATA, HideRoderick2, 0
+>SETDATA, CollectedBolts, 1
+>OPEN
+>SFX, COINS_PLACED_DOWN_HARDCOVER_PITCHED
+: [Maria] got 4 BOLTS!
+>CHARACTER, Roderick_talksprite_concerned, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+RODERICK: Oh, you just... took them. Ok.
+RODERICK: Um. I guess.
+RODERICK: I'll try not to stand under that spotlight, then...
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_5
+>OPEN
+>CHARACTER, Roderick_talksprite_stoic, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+RODERICK: Back for more conversation, ma'am? I'm not surprised. I am the most hardened warrior on the team, after all.
+>CHARACTER, Roderick_talksprite_angry, L1, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+RODERICK: [Maria]! Listen up! I shall only give you this advice but one time!
+RODERICK: When you play guitar, try to use the string parts!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+
+@Ch1_6
+>OPEN
+: [Maria] opened Felisha's purse.
+>SFX, Coins_In_Sack_Dropped_on_Wood
+: [Maria] got $200!
+>SETDATA, ClickedPurse, 1
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_7
+>OPEN
+>SETDATA, ClickedSweatband, 1
+>SFX, Notes Scrunched In Wallet
+: [Maria] found a Sweatband!
+>CHARACTER, Kouta_talksprite_happy, L2, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+KOUTA: Oh wow... it can't be...
+KOUTA: That's.. 3XIN's headband! The most legendary, famous synth player of all time!
+KOUTA: I heard he once played a keytar so hard, it tore a guy in half...! I can't believe he was at our school...!
+>CHARACTER, Kouta_talksprite_happy_close, L2, 0
+>CHARACTER, Eliana_talksprite_happy, R2, 250
+ELIANA: Woah, 3XIN?! Lemme see!!!
+>CHARACTER, Eliana_talksprite_concerned, R2, 0
+ELIANA: ...Kouta, that sweatband just says “NIKE”.
+>CHARACTER, Kouta_talksprite_happy, L2, 0
+>CHARACTER, Eliana_talksprite_concerned_close, R2, 0
+KOUTA: Was he a keyboard player?
+>CHARACTER, Kouta_talksprite_happy_close, L2, 0
+>CHARACTER, Roderick_talksprite_angry, L1, 250
+RODERICK: Who the hell is 3XIN?! I've never heard of him, and the McNormous family has been the pinnacle of musical performance in our home country for generations!
+>CHARACTER, Kouta_talksprite_thinking, L2, 0
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+KOUTA: You remember, Roderick, the guys told us about him last week!
+>CHARACTER, Kouta_talksprite_thinking_close, L2, 0
+>CHARACTER, Roderick_talksprite_stoic, L1, 0
+RODERICK: What guys?
+>CHARACTER, Kouta_talksprite_thinking, L2, 0
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+KOUTA: Y'know, outside the food court? The tiny dudes with the high-pitched voices who chewed on my fingers?
+>CHARACTER, Kouta_talksprite_thinking_close, L2, 0
+RODERICK: …
+>CHARACTER, Roderick_talksprite_angry, L1, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+RODERICK: Are you talking about the SQUIRRELS?!?!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_8
+>OPEN
+>CHARACTER, Kouta_talksprite_eating, L1, 250
+KOUTA: chmm... chew...
+>CHARACTER, Roderick_talksprite_stoic, R1, 250
+RODERICK: Kouta... what the hell are you eating?
+>CHARACTER, Roderick_talksprite_stoic_close, R1, 0
+>CHARACTER, Kouta_talksprite_happy, L1, 0
+KOUTA: Oh, this? It's a sandbutter peanutwich! Want some?
+>CHARACTER, Kouta_talksprite_happy_close, L1, 0
+>CHARACTER, Eliana_talksprite_concerned, R2, 250
+ELIANA: I don't think I've heard of that... do you mean “peanut butter sandwich”?
+>CHARACTER, Kouta_talksprite_frustrated, L1, 0
+>CHARACTER, Eliana_talksprite_concerned_close, R2, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+KOUTA: What? No, that's fucking stupid! It's like, a sandbutter peanutwich!
+>CHARACTER, Kouta_talksprite_happy, L1, 0
+KOUTA: We've all had them! Y'know, it's bread between two slices of peanut butter?
+>CHARACTER, Kouta_talksprite_happy_close, L1, 0
+>CHARACTER, Roderick_talksprite_stoic, R1, 0
+RODERICK: That sounds like you'd just get peanut butter all over your hands.
+>CHARACTER, Kouta_talksprite_happy, L1, 0
+>CHARACTER, Roderick_talksprite_stoic_close, R1, 0
+KOUTA: No, it's great! My grandma made me some last time I visited home, and I've kept a couple in my pocket ever since in case I get hungry!
+>CHARACTER, Kouta_talksprite_happy_close, L1, 0
+>CHARACTER, Roderick_talksprite_angry, R1, 0
+RODERICK: ...You have been carrying sandbutter peanutwiches in your pocket for two months?! That's disgusting!
+>CHARACTER, Roderick_talksprite_angry_close, R1, 0
+>CHARACTER, Kouta_talksprite_thinking, L1, 0
+KOUTA: Ahhhh, no, I see where the confusion is.
+>CHARACTER, Kouta_talksprite_happy, L1, 0
+KOUTA: See, I washed my pants yesterday, so all my snacks are still clean!
+>SETDATA, ClickedKouta, 1
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_9
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+ELIANA: Hm? Oh, right! That's our drum set! We got our team logo commissioned and everything!
+>CHARACTER, Eliana_talksprite_concerned, L1, 0
+ELIANA: I... forget, what is our band name supposed to be, again?
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>BACKGROUND, blackBackground, 500
+>CLOSE
+>BANDNAME, Pines Masters, Ch1_10, Name Your Band!, 21
+
+@Ch1_10
+>BACKGROUND, na, 500
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+ELIANA: Oh, doy! How could I forget The [Pines Masters]! I've been waist-deep in [Pines Masters] since I joined the band!
+ELIANA: Trust me, [Maria], you're gonna love being part of The [Pines Masters]! When I look at you, I totally associate you with [Pines Masters]! It's only natural to have “The [Pines Masters]” all over your clothes!
+>SETDATA, ClickedDrum, 1
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_11
+>OPEN
+>CHARACTER, Eliana_talksprite_secretive, L1, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+ELIANA: Psst... [Maria]... come over here. I wanna show you something, between us roomies...!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, Eliana_talksprite_happy, L2, 500
+>CHARACTER, Maria_talksprite_concerned, R2, 500
+ELIANA: ...Ta-da! I got my Photoface handle tattooed on my tummy!
+>CHARACTER, Maria_talksprite_neutral, R2, 0
+>CHARACTER, Eliana_talksprite_secretive, L2, 0
+ELIANA: It's all part of my master plan! See, the Battle of the Five-Man Bands championships next spring are nationally televised, right? So after we win, the cameras are all on us, right?
+ELIANA: So what I'm gonna do is, I beckon the cameras closer and grab the bottom of my shirt, like I'm about to flash my titties. Girls Gone Wild style, y'know, so everyone's paying attention?
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+ELIANA: And then, BAM! I stop before my boobs, so everyone just sees my Photoface handle!
+ELIANA: Everyone's gonna be so impressed... I'll get millions of followers overnight, and the governor will invite me to visit and I'll get to give a big speech and I'll get a deal with a major record label, and...
+>CHARACTER, Eliana_talksprite_concerned, L2, 0
+ELIANA: What? Of course the governor uses Photoface. How else are they supposed to find out the news?
+>CHARACTER, Eliana_talksprite_happy, L2, 0
+ELIANA: It's foolproof! ...Unless they cut to commercial.
+>SETDATA, ClickedEliana, 1
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CLOSE
+>GOTOBOOL, Ch1_12, ClickedEliana, ClickedDrum, CollectedBolts, ClickedKouta, ClickedPurse, ClickedSweatband
+
+@Ch1_12
+>BACKGROUND, StageBackgroundEarly, 0
+>CLEAROPTIONS
+>OPEN
+: A woman with blue hair and a lacy top enters the auditorium. She files her nails as she walks up the stairs, not a care in the world.
+>CHARACTER, Felisha_talksprite_annoyed, L1, 250
+FELISHA: 'Sup, bitches.
+>CHARACTER, Felisha_talksprite_annoyed_close, L1, 0
+>CHARACTER, Roderick_talksprite_stoic, R1, 250
+RODERICK: And the princess finally graces us with her presence!
+>CHARACTER, Felisha_talksprite_annoyed, L1, 0
+>CHARACTER, Roderick_talksprite_stoic_close, R1, 0
+FELISHA: Yeah. Sorry 'bout the wait, I was stuck in bed...
+>CHARACTER, Felisha_talksprite_annoyed_close, L1, 0
+>CHARACTER, Kouta_talksprite_happy, R2, 250
+KOUTA: I thought you said you were saying goodbye to your boyfriend?
+>CHARACTER, Felisha_talksprite_annoyed, L1, 0
+>CHARACTER, Kouta_talksprite_happy_close, R2, 0
+FELISHA: Yeah. In bed.
+FELISHA: He lasted a lot longer than usual... kinda suspicious, if you ask me.
+>CHARACTER, Felisha_talksprite_annoyed_close, L1, 0
+>CHARACTER, Maria_talksprite_neutral, R1, 500
+>CHARACTER, Eliana_talksprite_happy, R2, 500
+ELIANA: Oh! Felisha, have you met my roommate? Felisha, [Maria], [Maria], Felisha...
+>CHARACTER, Felisha_talksprite_annoyed, L1, 0
+>CHARACTER, Eliana_talksprite_concerned_close, R2, 0
+FELISHA: Hey. You're the new lead guitar, right? I was a little concerned when Eliana said she was bringing her hot roommate on the team... but, I think you're only an 8, maybe a 9? So, I've got no reason to be threatened by you...
+>CHARACTER, Felisha_talksprite_annoyed_close, L1, 0
+>CHARACTER, Eliana_talksprite_happy, R2, 0
+ELIANA: ...Well! I think we only have time to run one practice song before the other band arrives. How about... Felisha and [Maria], you face off against Roderick and Kouta? I'll stand in for the audience!
+>CHARACTER, Felisha_talksprite_angry, L1, 0
+>CHARACTER, Eliana_talksprite_happy_close, R2, 0
+FELISHA: Seriously, you're pairing me up with the new kid?! Are you that mad at me?!
+>CHARACTER, Felisha_talksprite_angry_close, L1, 0
+>CHARACTER, Eliana_talksprite_happy, R2, 0
+ELIANA: Oh, come on, Felisha, don't be like that! We need to practice if we want to succeed! It's like my bubbie always told me –
+ELIANA: “You can't make a matzo ball soup without breaking a few omelettes!”
+>CHARACTER, Eliana_talksprite_concerned, R2, 0
+ELIANA: ...Bubbie may have been a bit senile. Anyway, let's get into it!
+>CHARACTER, Roderick_talksprite_angry, R2, 500
+RODERICK: I may be an honorable man... but that doesn't mean I'll hold back against women!
+>CHARACTER, Roderick_talksprite_angry_close, R2, 0
+>CHARACTER, Kouta_talksprite_happy, L2, 250
+KOUTA: Sorry, what're we doing? I spaced out there.
+>SFX, Activate Glyph Forcefield, 500
+>MUSIC, na
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>BACKGROUND, blackBackground, 500
+>CLOSE
+>PAUSE, 1000
+>OPENTUTORIAL, Ch1_13
+
+@Ch1_13
+>PAUSE, 10000
+>TUTORIALSET, Ch1_14, true, false, false, false, 1000000, false
+>OPEN
+>CHARACTER, Eliana_talksprite_concerned, R1, 250
+ELIANA: ...What's that, [Maria]? You don't know our songs?
+>CHARACTER, Eliana_talksprite_happy, R1, 0
+ELIANA: Playing in a band isn't about the music, silly! It's all about the hype!
+ELIANA: See that meter at the top? That's your Hype! If you fill it up all the way, you win!
+ELIANA: Try using your Charm skill to hype up the crowd!
+>CHARACTER, na, R1, 500
+>CLOSE
+
+@Ch1_14
+>PAUSE, 1000
+>TUTORIALSET, Ch1_15, false, true, false, false, 1000000, true
+>PAUSE, 1000
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, R1, 250
+ELIANA: Woo!!! Go [Maria]!!!
+ELIANA: Of course, you're not the only one in the band! A good musician hypes up her bandmates too!
+ELIANA: If you use your Help skill, you can give Felisha bonus stars to use on her skills!
+>CHARACTER, na, R1, 500
+>CLOSE
+
+@Ch1_15
+>PAUSE, 1000
+>TUTORIALSET, Ch1_16, true, false, false, false, 1000000, false
+>PAUSE, 1000
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, R1, 250
+ELIANA: That's it! Just click the stars at the bottom to give Felisha the bonuses!
+>CHARACTER, na, R1, 500
+>CLOSE
+
+@Ch1_16
+>PAUSE, 1000
+>PAUSE, 1000
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, R1, 250
+ELIANA: Oh, Felisha!!! You're so charming and sexy!!!
+ELIANA: Of course, what would a Battle of the Bands be without some dirty fighting?
+ELIANA: You can use the Attack skill to attack Roderick & Kouta, and the Defend skill to protect yourself against their attacks!
+ELIANA: You can ignore the other band if you want, but keep in mind – if you lose all of your hearts, you won't be able to play anymore!
+>CHARACTER, na, R1, 500
+>TUTORIALSET, Ch1_17, false, false, true, true, 30000, false
+>CLOSE
+
+@Ch1_17
+>PAUSE, 1000
+>TUTORIALSET, , true, true, true, true, 1000000, false
+>PAUSE, 1000
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, R1, 250
+ELIANA: That's it! You've got it!
+ELIANA: Well, I think that's all you need to know! Go ahead and win that Battle!
+>CHARACTER, na, R1, 500
+>TUTORIALSET, , true, true, true, true, 40000, false
+>CLOSE
+
+@Ch1_18
+>BACKGROUND, StageBackgroundEarly, 500
+>MUSIC, Carpe_Diem, 500
+>OPEN
+>CHARACTER, Felisha_talksprite_hyped, R2, 250
+>CHARACTER, Maria_talksprite_concerned, R1, 250
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+FELISHA: Yeah bitches!!!! That's what I'm talking about! I'll step on your face until you cry, you fuckers!!!
+>CHARACTER, Felisha_talksprite_hyped_close, R2, 0
+>CHARACTER, Roderick_talksprite_failed, L1, 250
+>CHARACTER, Kouta_talksprite_failed_close, L2, 250
+RODERICK: ...Felled by a newcomer. Father... mother... I have failed you.
+>CHARACTER, Roderick_talksprite_failed_close, L1, 0
+>CHARACTER, Kouta_talksprite_failed, L2, 0
+KOUTA: Damn it, looks like it's another night to paint myself purple...
+>GOTO, Ch1_20
+
+@Ch1_19
+>BACKGROUND, StageBackgroundEarly, 500
+>MUSIC, Carpe_Diem, 500
+>OPEN
+>CHARACTER, Roderick_talksprite_stoic, L1, 250
+>CHARACTER, Kouta_talksprite_happy_close, L2, 250
+RODERICK: In the name of my home country, I have vanquished these wenches!
+>CHARACTER, Roderick_talksprite_stoic_close, L1, 0
+>CHARACTER, Kouta_talksprite_happy, L2, 0
+KOUTA: Hot damn, we were good! Looks like ya shoulda put on your jumpsocks, Felisha!
+>CHARACTER, Kouta_talksprite_happy_close, L2, 0
+>CHARACTER, Felisha_talksprite_failed, R2, 250
+>CHARACTER, Maria_talksprite_neutral, R1, 250
+FELISHA: Fucking hell... I'm aching worse than I was after that frat party...
+>GOTO, Ch1_20
+
+@Ch1_20
+>CHARACTER, na, L1, 500
+>CHARACTER, Eliana_talksprite_happy, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+ELIANA: Well, don't feel too sorry for yourselves. The band from Ivytonne University should be arriving any minute now!
+ELIANA: Everyone take five! We need to make sure we have energy before...
+>SFX, Activate Glyph Forcefield, 500
+>MUSIC, na, 500
+?????: Running away, are we?
+>CHARACTER, Eliana_talksprite_concerned_close, L2, 0
+>CHARACTER, Felisha_talksprite_annoyed, L1, 250
+FELISHA: Oh great, look who showed up right on cue...
+>CHARACTER, na, L1, 1000
+>CHARACTER, na, L2, 1000
+>MUSIC, Sugar Plum Dark Mix, 750
+: A crew of five college students marches into the auditorium. Each of the band members is wearing a perfectly tailored suit, and sports neatly combed purple hair.
+>CHARACTER, na, L1, 1000
+>CHARACTER, na, L2, 1000 
+: The band ascends the stage, as dozens of students from both universities filter into the building.
+: The four women in the band are each carrying a glistening violin – and they are led onto the stage by a pale, young man.
+>CHARACTER, Kristophf_talksprite_pompous, R1, 250
+?????: Well, if it isn't the SHM[[Pines Masters, CAPS], CHOPCON]! The only perfect record Five-Man Band in the tournament... perfect losing, that is!
+>CHARACTER, Kristophf_talksprite_pompous_close, R1, 0
+>CHARACTER, Maria_talksprite_neutral, L1, 250
+>CHARACTER, Kouta_talksprite_happy, L2, 250
+KOUTA: Oh yeah?! Well, we have a new lead guitarist now! And she's gonna kick your butt so hard, you'll WISH you'd stayed under the floorboards in my grandma's house!
+>CHARACTER, Kouta_talksprite_happy_close, L2, 0
+>CHARACTER, Kristophf_talksprite_angry, R1, 0
+?????: Yes, I see that... [Maria, SUBSTRING, 0, 1]-[Maria]?! Holy hell, you joined this shitstain of a team?! And you're showing your face in front of me?!
+>CHARACTER, Felisha_talksprite_angry, L2, 500
+FELISHA: Wait, [Maria], you know this pissboy? Who is he?!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>BACKGROUND, blackBackground, 500
+>CLOSE
+>CHANGENAME, Kristophf, Ch1_21, Name Your Rival!, Kristophf_talksprite_pompous, 15
+
+@Ch1_21
+>BACKGROUND, StageBackgroundLate, 500
+>OPEN
+>CHARACTER, Kristophf_talksprite_angry, R1, 250
+>CHARACTER, Maria_talksprite_neutral, L1, 250
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 500
+[Kristophf, CAPS]: Seriously, you idiots don't know me by this point?! I am [Kristophf] Perrier Delacroix Pellegrino III! Top of my class at Ivytonne Law!
+[Kristophf, CAPS]: I am the lead vocalist of the official Ivytonne University band! These are my groupies! And together, we are... [Kristophf] and the [Kristophf]ettes!
+>CHARACTER, Kristophf_talksprite_angry_close, R1, 0
+>CHARACTER, Roderick_talksprite_stoic, L2, 250
+RODERICK: Well, sure. But that does not explain how you know [Maria].
+>CHARACTER, na, L2, 500
+>CHARACTER, Kristophf_talksprite_pompous, R1, 0
+[Kristophf, CAPS]: Would you believe that we were once... romantically entangled? [Maria] was my high school sweetheart... my first true love.
+[Kristophf, CAPS]: Serene and silent... eyes I could fall into for hours... the hottest sex I've ever had... perfect dimples in her smile... we were truly meant to be together forever.
+>CHARACTER, Kristophf_talksprite_angry, R1, 0
+>CHARACTER, Maria_talksprite_concerned, L1, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 2000
+[Kristophf, CAPS]: ...Or at least, it WOULD be forever, if she hadn't stolen my brand new Lamborghini and crashed it into a fucking ditch!
+[Kristophf, CAPS]: Seriously, what the hell?! Who steals shit just to break it?!
+[Kristophf, CAPS]: I was willing to let bygones be bygones, and buy myself maybe a Porsche this time... but apparently, SOMEONE drained my entire fucking bank account!
+[Kristophf, CAPS]: I had to intern at my father's company for a whole summer just to earn enough to pay my college tuition!
+[Kristophf, CAPS]: I was gonna go easy on you, given that you're the worst band in the tournament and all, but this shit's personal now.
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+[Kristophf, CAPS]: [Kristophf]ettes! Feel free to take these bozos out however you want... but the klepto cunt is mine!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>BACKGROUND, blackBackground, 500
+>CLOSE
+>MUSIC, na, 750
+>PAUSE, 1000
+>BATTLE, BossIvytonne
+
+@Ch1_22
+>BACKGROUND, StageBackgroundLate, 500
+>MUSIC, Carpe_Diem, 500
+>OPEN
+>CHARACTER, Eliana_talksprite_happy, L2, 250
+ELIANA: All right! We're on our way to the very top!
+>CHARACTER, Eliana_talksprite_happy_close, L2, 0
+>CHARACTER, Kouta_talksprite_happy, L1, 250
+KOUTA: This is just like one of those game shows where the dudes have to compete to take each others' piercings out!
+>CHARACTER, Kouta_talksprite_happy_close, L1, 0
+>CHARACTER, Felisha_talksprite_flirty, L2, 500
+FELISHA: You're all lucky [Kristophf] was distracted staring at my ass, or y'all never would have won!
+>CHARACTER, Felisha_talksprite_flirty_close, L2, 0
+>CHARACTER, Roderick_talksprite_angry, L1, 500
+RODERICK: I promise... I will bring that champion's ring home! For the pride of the McNormous family, and the glory of all Canada!
+>MUSIC, Sugar Plum Dark Mix, 750
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, Kristophf_talksprite_angry, R2, 250
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 250, 1000
+[Kristophf, CAPS]: NO! There's no way I lost... to you fucking weirdos!
+>CHARACTER, Maria_talksprite_neutral, L2, 250
+[Kristophf, CAPS]: And as for you, [Maria]... this isn't over, bitch! I will have my revenge, just you wait!
+[Kristophf, CAPS]: Just a word of advice, to the rest of you [Pines Masters]... y'all better sleep with one eye open! Because that slut of a band leader will rob you for every last cent if she ever gets the chance!
+[Kristophf, CAPS]: Fuck, she'd steal your organs too if she had a scalpel!
+>CHARACTER, Kristophf_talksprite_angry_close, R2, 0
+>CHARACTER, Kristophfette1_talksprite_afraid, R1, 250
+[Kristophf, CAPS]ETTE: Baby, I think you should-
+>SFX, Activate Glyph Forcefield, 500
+>MUSIC, Sugar Plum Breakdown, 1000
+>PAUSE, 500
+>SFX, PUNCH_DESIGNED_HEAVY_74, 1000
+>SCREENSHAKE, 500, 1000
+>CHARACTER, na, R1, 500
+>CHARACTER, Kristophf_talksprite_angry, R2, 0
+[Kristophf, CAPS]: Seriously, do you all not get how insane this bitch is?! I'm surprised miss sticky fingers here hasn't stolen the floorboards yet!
+>CHARACTER, Kristophf_talksprite_pompous, R2, 0
+[Kristophf, CAPS]: What's the matter, [Maria]? You couldn't carry the drum kit back to your car?
+>CHARACTER, Kristophf_talksprite_angry, R2, 0
+>SFX, PUNCH_DESIGNED_HEAVY_74, 1500
+>SCREENSHAKE, 250, 1000
+[Kristophf, CAPS]: Oh right, you don't have a car – the only one you've ever driven is wasting away in a junkyard!
+>CHARACTER, Kristophf_talksprite_angry_close, R2, 0
+>CHARACTER, Kristophfette2_talksprite_afraid, R1, 250
+[Kristophf, CAPS]ETTE: [Kristophf], please, you need to move-!
+>SFX, PUNCH_DESIGNED_HEAVY_74, 2000
+>SCREENSHAKE, 1000, 1000
+>CHARACTER, Kristophf_talksprite_angry, R2, 0
+>CHARACTER, Kristophfette2_talksprite_afraid_close, R1, 0
+[Kristophf, CAPS]: No, I will have my say!
+>CHARACTER, na, R1, 500
+[Kristophf, CAPS]: Mark my words... as soon as I get the opportunity, [Maria], I shall destroy everything and everyone you hold dear-!
+>SFX, Spotlight_Break, 1500
+>MUSIC, na, 500
+>SCREENSHAKE, 2000, 2000
+>PAUSE, 1000
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>BACKGROUND, BlackBackground, 500
+>CLOSE
+>PAUSE, 2000
+>BACKGROUND, KristophfCrushed1, 500
+>PAUSE, 3000
+>BACKGROUND, KristophfCrushed3, 0
+>PAUSE, 2000
+>BACKGROUND, KristophfCrushed2, 0
+>PAUSE, 3000
+>OPEN
+>SFX, PUNCH_DESIGNED_HEAVY_74
+>SCREENSHAKE, 500, 1000
+>CHARACTER, Kristophfette1_talksprite_afraid, R2, 250
+>CHARACTER, Kristophfette2_talksprite_afraid, R1, 250
+[Kristophf, CAPS]ETTES: YeeeeeeK!!!!
+>CHARACTER, Kristophfette2_talksprite_afraid_close, R1, 0
+[Kristophf, CAPS]ETTE: [Kristophf] baby... baby, it can't be...!
+>CHARACTER, Kristophfette1_talksprite_afraid_close, R2, 0
+>CHARACTER, Eliana_talksprite_happy, L1, 250
+ELIANA: Well, [Pines Masters], looks like we finally got our first win of the tournament! Who's up for lunch? My treat!
+>CHARACTER, Eliana_talksprite_happy_close, L1, 0
+>CHARACTER, Kouta_talksprite_happy, L2, 250
+KOUTA: Yeah, let's hit up some cute local restaurant and just completely trash the place!
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CHARACTER, Kristophfette2_talksprite_afraid, R1, 0
+[Kristophf, CAPS]ETTE: We... we were gonna get married...!
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>CLOSE
+>CHARACTER, na, R1, 500
+>CHARACTER, na, R2, 500
+>CHARACTER, na, L1, 500
+>CHARACTER, na, L2, 500
+>BACKGROUND, na, 100
+>OPTIONS, PickCh1_2
+
+@Ch1_23
+>BACKGROUND, KristophfCrushed4, 0
+>CLEAROPTIONS
+>OPEN
+>SFX, Notes Scrunched In Wallet
+: [Maria] picked up [Kristophf]'s shoes!
+>PAUSE, 500
+>CLOSE
+>PAUSE, 500
+>BACKGROUND, BlackBackground, 1000
+>MUSIC, Fanfare for Space, 500
+>PAUSE, 18625
+>BACKGROUND, GameLogo1, 1000
+>PAUSE, 21426
+>BACKGROUND, GameLogo2, 1500
+>PAUSE, 21404
+>MAINMENU

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BattleData : MonoBehaviour
 {
+    public string battleName;
     public MusicianData[] playerTeam;
     public MusicianData[] enemyTeam;
-    public AudioClip playerMusic;
-    public AudioClip enemyMusic;
+    public AudioClip[] playerMusic;
+    public AudioClip[] enemyMusic;
     public int totalHype = 100;
     public int startingHype = 50;
     public int playerHealth = 5;
@@ -17,9 +18,12 @@ public class BattleData : MonoBehaviour
     public Sprite backgroundSprite;
     public Color playerColor;
     public Color enemyColor;
+    public Texture2D playerLogo, enemyLogo;
+    public float delayTime;
     public float startTime;
     public float musicBPM;
     public float stageHeight;
+    public string winGoTo, loseGoTo;
     // Start is called before the first frame update
     void Start()
     {
