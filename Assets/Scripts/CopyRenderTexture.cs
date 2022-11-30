@@ -7,15 +7,20 @@ public class CopyRenderTexture : MonoBehaviour
     public RenderTexture renderTexture;
     public bool fullTexture = true;
     TextureStorer textureStorer;
+    TextBoxControl tbc;
+    DrawingScript drawingScript;
     // Start is called before the first frame update
     void Start()
     {
         textureStorer = FindObjectOfType<TextureStorer>();
+        tbc = FindObjectOfType<TextBoxControl>();
+        drawingScript = FindObjectOfType<DrawingScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("I Exist!");
         StartCoroutine(TakeSnapshot());
     }
 
@@ -23,11 +28,26 @@ public class CopyRenderTexture : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
         if (fullTexture){
-            Destroy(textureStorer.storedTexture);
-            textureStorer.storedTexture = ToTexture2D(renderTexture);
+            if (tbc == null || !tbc.GetRenderedTexture()){
+                Destroy(textureStorer.storedTextureOld);
+                textureStorer.storedTextureOld = textureStorer.storedTexture;
+                textureStorer.storedTexture = ToTexture2D(renderTexture);
+            }
+            //Debug.Log("Setting Stored Texture");
+            if (tbc != null){
+                tbc.SetRenderedTexture();
+                //Debug.Log("Set Rendered Texture");
+            }
         } else {
-            Destroy(textureStorer.storedArt);
+            Destroy(textureStorer.storedArtOld);
+            textureStorer.storedArtOld = textureStorer.storedArt;
             textureStorer.storedArt = ToTexture2D(renderTexture);
+            //Debug.Log("Setting Stored Texture");
+            if (drawingScript != null){
+                drawingScript.SetCapturedArt();
+                //Debug.Log("Set Rendered Texture");
+            }
+            //Debug.Log("Setting Art Texture");
         }
         //Graphics.CopyTexture(tex, savedTexture);
     }

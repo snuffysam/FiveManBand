@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &150102014488211415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 392138672517760418, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_Name
+      value: IvytonneBandLogo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: tagline
+      value: The Ivytonne University Band
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: description
+      value: Ivytonne University - home to the most expensive law school in the state.
+        The college was founded in 1694. It is named for Admiral Thomas Ivytonne,
+        who died immediately after writing a will that left all his fortune to the
+        school. The Ivytonne Band traditionally consists of a violin quartet and
+        one opera singer - though the latest members have made some creative changes
+        to the band's name...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: galleryName
+      value: '[Kristophf] and the [Kristophf]ettes Logo'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: unlockConditions
+      value: IvytonneBandGalleryUnlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: d7f52c599a35a41aaa80bb21666dea83, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: bf1de3b5955484b019f3e06197cb58f0, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 711f6cc036c644d4898e2269e0d24282, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3d0f978cdd8eb479b8c499789e57f26a, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 70da97519a6614abbaace5acdf6105dc, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: eb3b27dc9830d4366a68164c2d4489bf, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: c64aad56b923341bb9ad70f7480beb0c, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: db4f90a86ffa54e4eaebfd466a70f63e, type: 3}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}

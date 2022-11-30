@@ -881,6 +881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeImage: {fileID: 408452738}
   optionsMenu: {fileID: 1759464226}
+  renderTexCamera: {fileID: 2135744187}
 --- !u!114 &659703826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1419,7 +1420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &965489898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1949,7 +1950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storedTexture: {fileID: 0}
+  storedTextureOld: {fileID: 0}
   storedArt: {fileID: 0}
+  storedArtOld: {fileID: 0}
 --- !u!4 &1217109878
 Transform:
   m_ObjectHideFlags: 0
@@ -1964,6 +1967,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1344555016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344555018}
+  - component: {fileID: 1344555017}
+  m_Layer: 0
+  m_Name: AlwaysSetBandName
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1344555017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344555016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a4094a61dca4360ac6ab496fcaf34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bandName1: {fileID: 1959728594}
+  bandName2: {fileID: 62746361}
+--- !u!4 &1344555018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344555016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.7344866, y: 2.4085045, z: 11.926105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404832233
 GameObject:
@@ -2514,6 +2563,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 659703825}
+        m_TargetAssemblyTypeName: MenuText, Assembly-CSharp
+        m_MethodName: OpenGallery
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1513937293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,6 +2892,7 @@ GameObject:
   - component: {fileID: 1640521651}
   - component: {fileID: 1640521654}
   - component: {fileID: 1640521655}
+  - component: {fileID: 1640521656}
   m_Layer: 6
   m_Name: ExistingTexture
   m_TagString: Untagged
@@ -2924,7 +2986,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640521649}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97b11e04813eb4e0692da37a936cda56, type: 3}
   m_Name: 
@@ -2942,6 +3004,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artTexture: 1
+  tex: {fileID: 0}
+--- !u!114 &1640521656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1640521649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f8c33a8dc3548d989a78e0a0d846c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boolToCheck: DrewLogo
+  delayTimer: 0.5
 --- !u!1 &1642181321
 GameObject:
   m_ObjectHideFlags: 0
@@ -3713,7 +3790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &2135744187
 Camera:
   m_ObjectHideFlags: 0

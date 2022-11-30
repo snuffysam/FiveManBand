@@ -21,12 +21,14 @@ public class TextBoxControl : MonoBehaviour
     public TutorialController tutorialController;
     public NameTypeScript bandNameScript;
     public GameObject pauseMenu;
+    public Camera renderTexCamera;
 
     public AudioSource debugSource;
 
     public static string[] fullScript;
     public static Dictionary<string, string> replacements;
     public static Dictionary<string, bool> gameData;
+    public static Dictionary<string, float> recordTimes;
     public static bool autoplayEnabled = false;
     public static float musicVolume = 0.5f;
     public static float sfxVolume = 0.5f;
@@ -49,6 +51,8 @@ public class TextBoxControl : MonoBehaviour
     GameObject options;
     SaveSerial saveSerial;
     GameObject typeSfxSource;
+    bool didRenderTexture = false;
+    bool didRenderArtTexture = false;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +80,10 @@ public class TextBoxControl : MonoBehaviour
             gameData = new Dictionary<string, bool>();
         }
 
+        if (recordTimes == null){
+            recordTimes = new Dictionary<string, float>();
+        }
+
         saveSerial = FindObjectOfType<SaveSerial>();
 
         BattleMessage[] bm = FindObjectsOfType<BattleMessage>();
@@ -97,6 +105,12 @@ public class TextBoxControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (Screen.fullScreen){
+            Screen.SetResolution(1920, 1080, Screen.fullScreen);
+        } else {
+            Screen.SetResolution(1920, 1080, Screen.fullScreen);
+        }*/
+
         if (textBoxActive){
             if (textBoxObject.GetComponent<Image>().color.a < 1f){
                 Color c = textBoxObject.GetComponent<Image>().color;
@@ -141,7 +155,7 @@ public class TextBoxControl : MonoBehaviour
                 }
             }
 
-            if (canPressMouse && Input.GetAxis("Submit") > 0f){
+            if (canPressMouse && Input.GetAxis("Submit") > 0f && fullScript[currentLine][0] != '>'){
                 canPressMouse = false;
                 if (currentBlockText.Length < nextBlockText.Length){
                     currentBlockText = nextBlockText;
@@ -509,6 +523,12 @@ public class TextBoxControl : MonoBehaviour
     IEnumerator MAINMENU(string[] parms){
         yield return new WaitForSeconds(0f);
 
+        TextureStorer storer = FindObjectOfType<TextureStorer>();
+        if (storer.storedTextureOld == null){
+            storer.storedTextureOld = new Texture2D(512, 512);
+        }
+        Graphics.CopyTexture(storer.storedTexture, storer.storedTextureOld);
+
         if (saveSerial != null){
             saveSerial.SaveGameStart();
             Resources.UnloadUnusedAssets();
@@ -524,6 +544,71 @@ public class TextBoxControl : MonoBehaviour
 
         textSoundName = parms[0];
         textSoundMaxIndex = int.Parse(parms[1]);
+
+        ExecuteLine();
+    }
+
+    IEnumerator FORCEBANDLOGO(string[] parms){
+
+        bool shouldForce1 = false;
+        bool shouldForce2 = parms.Length > 0;
+
+        DeleteWithoutSave dws = FindObjectOfType<DeleteWithoutSave>();
+        if (dws != null){
+            GetStoredTexture gws = dws.GetComponent<GetStoredTexture>();
+            TextureStorer storer = FindObjectOfType<TextureStorer>();
+            Graphics.CopyTexture(storer.storedArt,gws.tex);
+            gws.GetComponent<MeshRenderer>().material.mainTexture = gws.tex;
+            shouldForce2 = false;
+        }
+
+        if (shouldForce1){
+            Debug.Log("stage 1");
+            ResetRenderedArtTexture();
+
+            while (!GetRenderedArtTexture()){
+                yield return new WaitForSeconds(0.1f);
+            }
+        }
+
+        //Debug.Log("stage 2");
+
+        //yield return new WaitForSeconds(5f);
+
+        //Debug.Log("stage 3");
+
+        yield return new WaitForSeconds(0.1f);
+
+        if (shouldForce2){
+            DrawingScript drawingScript = FindObjectOfType<DrawingScript>();
+
+            if (renderTexCamera != null){
+                renderTexCamera.gameObject.SetActive(true);
+            }
+
+            if (drawingScript != null){
+                drawingScript.controlCamera = false;
+            }
+
+            while (!didRenderTexture){
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            if (renderTexCamera != null){
+                renderTexCamera.gameObject.SetActive(false);
+            }
+
+            if (drawingScript != null){
+                drawingScript.controlCamera = true;
+            }
+
+        }
+
+        //Debug.Log("stage 4");
+
+        //yield return new WaitForSeconds(5f);
+
+        //Debug.Log("stage 5");
 
         ExecuteLine();
     }
@@ -567,7 +652,7 @@ public class TextBoxControl : MonoBehaviour
 
             string funcName = parms[1];
 
-            MethodInfo mInfo = this.GetType().GetMethod(funcName);
+            MethodInfo mInfo = typeof(TextBoxControl).GetMethod(funcName);
             swap = (string)mInfo.Invoke(this, new object[] {parms2});
         }
         return swap;
@@ -620,11 +705,23 @@ public class TextBoxControl : MonoBehaviour
         return false;
     }
 
-    public bool GetData(string key){
-        if (!gameData.ContainsKey(key)){
+    public static bool GetData(string key){
+        if (gameData == null || !gameData.ContainsKey(key)){
             return false;
         }
         return gameData[key];
+    }
+
+    public static string GetRecordTime(string key){
+        if (!recordTimes.ContainsKey(key)){
+            return "99:99.99";
+        }
+        int intTime = (int)(recordTimes[key]);
+        int minutes = intTime/60;
+        int seconds = intTime%60;
+        int mult100 = (int)(recordTimes[key]*100);
+        int decimals = mult100%100;
+        return "" + minutes + ":" + seconds + "." + decimals;
     }
 
     public void SetData(string key, bool data){
@@ -692,7 +789,6 @@ public class TextBoxControl : MonoBehaviour
 
             this.currentLine = currentLine;
             StartCoroutine(FORCERENDERTEX());
-            StartCoroutine(OPENLOAD(currentLine));
     }
 
     public string GetOptionsLoaded(){
@@ -715,18 +811,99 @@ public class TextBoxControl : MonoBehaviour
         ExecuteLine(loadLine);
     }
 
+    public void SetRenderedTexture(){
+        if (GetRenderedArtTexture()){
+            didRenderTexture = true;
+        }
+    }
+
+    public void SetRenderedArtTexture(){
+        didRenderArtTexture = true;
+    }
+
+    public void ResetRenderedTexture(){
+        didRenderTexture = false;
+    }
+
+    public void ResetRenderedArtTexture(){
+        DeleteWithoutSave dws = FindObjectOfType<DeleteWithoutSave>();
+        if (dws != null){
+            Destroy(dws.GetComponent<GetStoredTexture>().tex);
+            dws.GetComponent<GetStoredTexture>().tex = null;
+            dws.GetComponent<GetStoredTexture>().SetShouldGetTexture();
+        }
+        didRenderArtTexture = false;
+    }
+
+    public bool GetRenderedTexture(){
+        return didRenderTexture;
+    }
+
+    public bool GetRenderedArtTexture(){
+        if (FindObjectOfType<DeleteWithoutSave>() == null){
+            Debug.Log("no delete without save?");
+            return true;
+        }
+        return didRenderArtTexture;
+    }
+
     IEnumerator FORCERENDERTEX(){
-        DrawingScript drawingScript = FindObjectOfType<DrawingScript>();
+        bool shouldForce = false;
+        bool shouldForce2 = false;
 
-        if (drawingScript != null){
-            drawingScript.controlCamera = false;
-            drawingScript.GetComponent<NameTypeScript>().key = "Pines Masters";
+        if (shouldForce){
+            Debug.Log("stage 1");
+            didRenderArtTexture = false;
+
+            while (!GetRenderedArtTexture()){
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            Debug.Log("stage 2");
         }
 
-        yield return new WaitForSeconds(0.1f);
+        if (shouldForce2){
 
-        if (drawingScript != null){
-            drawingScript.controlCamera = true;
+            didRenderTexture = false;
+            //yield return new WaitForSeconds(5f);
+
+            Debug.Log("stage 3");
+
+            yield return new WaitForSeconds(0.1f);
+
+            DrawingScript drawingScript = FindObjectOfType<DrawingScript>();
+
+            if (renderTexCamera != null){
+                renderTexCamera.gameObject.SetActive(true);
+            }
+
+            if (drawingScript != null){
+                drawingScript.controlCamera = false;
+                drawingScript.GetComponent<NameTypeScript>().key = "Pines Masters";
+            }
+
+            while (!GetRenderedTexture()){
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            if (drawingScript != null){
+                drawingScript.controlCamera = true;
+            }
+
+            if (renderTexCamera != null){
+                renderTexCamera.gameObject.SetActive(false);
+            }
+
+            Debug.Log("stage 4");
+
+            //yield return new WaitForSeconds(5f);
+
+            //TextureStorer textureStorer = FindObjectOfType<TextureStorer>();
+            //textureStorer.storedTexture = textureStorer.storedTextureOld;
+
+            Debug.Log("stage 5");
         }
+
+        StartCoroutine(OPENLOAD(currentLine));
     }
 }

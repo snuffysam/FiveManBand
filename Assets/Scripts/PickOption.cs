@@ -20,9 +20,9 @@ public class PickOption : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tbc.CanInteract() && !tbc.GetData(DisableOnBool)){
+        if (tbc.CanInteract() && !TextBoxControl.GetData(DisableOnBool)){
             button.enabled = true;
-            if (tbc.GetData(HideOnBool)){
+            if (TextBoxControl.GetData(HideOnBool)){
                 button.enabled = false;
                 GetComponent<Image>().enabled = false;
             } else {
@@ -30,7 +30,7 @@ public class PickOption : MonoBehaviour
             }
         } else {
             button.enabled = false;
-            if (tbc.GetData(HideOnBool)){
+            if (TextBoxControl.GetData(HideOnBool)){
                 GetComponent<Image>().enabled = false;
             } else {
                 GetComponent<Image>().enabled = true;

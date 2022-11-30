@@ -24,6 +24,7 @@ public class PauseBehaviorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //logPercentSlider.value = 1f;
         SetSliders();
     }
 
@@ -130,19 +131,19 @@ public class PauseBehaviorScript : MonoBehaviour
                 index = i;
                 break;
             }
-            Resources.UnloadUnusedAssets();
-            System.GC.Collect();
+            //Resources.UnloadUnusedAssets();
+            //System.GC.Collect();
         }
         
         string logDisplay = "";
         for (int i = index; i < TextBoxControl.adventureLog.Count; i++){
             logDisplay += TextBoxControl.adventureLog[i] + "\n\n";
-            Resources.UnloadUnusedAssets();
-            System.GC.Collect();
+            //Resources.UnloadUnusedAssets();
+            //System.GC.Collect();
         }
 
-        Resources.UnloadUnusedAssets();
-        System.GC.Collect();
+        //Resources.UnloadUnusedAssets();
+        //System.GC.Collect();
 
         return logDisplay;
     }

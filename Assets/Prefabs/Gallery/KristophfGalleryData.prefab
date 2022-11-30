@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &150102014488211415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 392138672517760418, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_Name
+      value: KristophfGalleryData
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: tagline
+      value: '"The Sworn Archrival"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: description
+      value: '[Kristophf] was born with a silver spoon in his mouth, and another
+        two down the throat for good measure. Former high school boyfriend of [Maria].
+        Their relationship was like a lopsided tic-tac-toe game - both of them are
+        X''s, but only one of them ever had O''s. If music doesn''t work out, [Kristophf]
+        plans to follow in the family business - luxury sock covers.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: galleryName
+      value: '[Kristophf] Perrier Delacroix Pellegrino III'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: unlockConditions
+      value: KristophfGalleryUnlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 20821b2e81fd64975932af0d177faca2, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 55f854c2de238455fa1f406104623e30, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 41ff2375221734bc8ae2ed56d7579e05, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: b6ebc1171e3f441c6a7fe463aad77e93, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 737afc219b4c145c79145b49c5266126, type: 3}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}

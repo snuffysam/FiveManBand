@@ -69,8 +69,9 @@ MonoBehaviour:
   m_text: "Programming, Art, & Writing: snuffysam\n\nBattle Band Music: RK Studios\u200B\n\nOther
     Music:\n\"Sugar Plum Dark Mix\" Kevin MacLeod (incompetech.com)\n\"Sugar Plum
     Breakdown\" Kevin MacLeod (incompetech.com)\n\"Loping Sting\" Kevin MacLeod (incompetech.com)\n\"Fanfare
-    for Space\" Kevin MacLeod (incompetech.com)\n\"Carpe Diem\" Kevin MacLeod (incompetech.com)\nLicensed
-    under Creative Commons: By Attribution 4.0 License\n\nBackgrounds from potat0master
+    for Space\" Kevin MacLeod (incompetech.com)\n\"Carpe Diem\" Kevin MacLeod (incompetech.com)\n\"Divertimento
+    K131\" Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution
+    4.0 License\n\nSFX from Shapeforms on itch.io\n\nBackgrounds from potat0master
     on itch.io, and pexels.com\n\nFonts from Google Fonts & Levi Szekeres"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 94aeaea079a814ce9bf9e1903b5bb7d4, type: 2}
@@ -98,8 +99,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27
-  m_fontSizeBase: 27
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -112,7 +113,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: -20
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4

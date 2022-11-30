@@ -35,8 +35,12 @@ public class ShakeObject : MonoBehaviour
                 shakeForce -= Time.deltaTime*2f;
             }
             transform.position = startPos+deltaPos;
+
+            if (shakeTimer <= 0f){
+                transform.position = startPos;
+            }
         } else {
-            transform.position = startPos;
+            //transform.position = startPos;
         }
     }
 

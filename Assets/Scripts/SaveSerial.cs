@@ -114,6 +114,7 @@ public class SaveSerial : MonoBehaviour
             //Debug.Log("got file");
             TextBoxControl.replacements = data.replacements;
             TextBoxControl.gameData = data.gameData;
+            Debug.Log("Loaded Game Data");
             TextBoxControl.adventureLog = data.adventureLog;
             TextBoxControl.autoplayEnabled = data.autoplayEnabled;
             TextBoxControl.musicVolume = data.musicVolume;
@@ -124,11 +125,18 @@ public class SaveSerial : MonoBehaviour
             TextBoxControl.textSoundMaxIndex = data.textSoundMaxIndex;
 
             TextureStorer textureStorer = FindObjectOfType<TextureStorer>();
-            if (textureStorer != null && textureStorer.storedArt != null && data.bandLogo != null){
+            if (textureStorer != null && /*textureStorer.storedArt != null &&*/ data.bandLogo != null){
+                if (textureStorer.storedArt == null){
+                    textureStorer.storedArt = new Texture2D(512, 512);
+                }
                 ImageConversion.LoadImage(textureStorer.storedArt, data.bandLogo, false); 
+                Debug.Log("Set Stored Texture");
                 //textureStorer.storedArt = new Texture2D (textureStorer.storedArt.width, textureStorer.storedArt.height);
                 //textureStorer.storedArt.LoadRawTextureData (data.bandLogo);
-
+                GetStoredTexture gts = FindObjectOfType<GetStoredTexture>();
+                if (gts.GetComponent<MeshRenderer>() != null){
+                    gts.GetComponent<MeshRenderer>().material.mainTexture = textureStorer.storedArt;
+                }
                 //Debug.Log("loaded texture");
             }
 

@@ -98,6 +98,8 @@ ELIANA: Well, I guess until Felisha gets back, we can't do much except wait arou
 >CHARACTER, Eliana_talksprite_happy_close, L2, 0
 >CHARACTER, Roderick_talksprite_stoic, L1, 0
 RODERICK: [Maria]... I propose you use this time to get the lay of the land. To win a battle, one must be deeply familiar with the battlefield!
+>SETDATA, MariaGalleryUnlock, 1
+>FORCEBANDLOGO, yes
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
 >CHARACTER, na, R1, 500
@@ -156,6 +158,7 @@ RODERICK: Back for more conversation, ma'am? I'm not surprised. I am the most ha
 >SCREENSHAKE, 500, 1000
 RODERICK: [Maria]! Listen up! I shall only give you this advice but one time!
 RODERICK: When you play guitar, try to use the string parts!
+>SETDATA, RoderickGalleryUnlock1, 1
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
 >CHARACTER, na, R1, 500
@@ -262,6 +265,7 @@ KOUTA: See, I washed my pants yesterday, so all my snacks are still clean!
 ELIANA: Hm? Oh, right! That's our drum set! We got our team logo commissioned and everything!
 >CHARACTER, Eliana_talksprite_concerned, L1, 0
 ELIANA: I... forget, what is our band name supposed to be, again?
+>FORCEBANDLOGO
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
 >CHARACTER, na, R1, 500
@@ -272,6 +276,7 @@ ELIANA: I... forget, what is our band name supposed to be, again?
 
 @Ch1_10
 >BACKGROUND, na, 500
+>SETDATA, DrewLogo, 1
 >OPEN
 >CHARACTER, Eliana_talksprite_happy, L1, 250
 >CHARACTER, Maria_talksprite_neutral, R1, 250
@@ -308,6 +313,7 @@ ELIANA: Everyone's gonna be so impressed... I'll get millions of followers overn
 ELIANA: What? Of course the governor uses Photoface. How else are they supposed to find out the news?
 >CHARACTER, Eliana_talksprite_happy, L2, 0
 ELIANA: It's foolproof! ...Unless they cut to commercial.
+>SETDATA, ElianaGalleryUnlock, 1
 >SETDATA, ClickedEliana, 1
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
@@ -320,7 +326,8 @@ ELIANA: It's foolproof! ...Unless they cut to commercial.
 >BACKGROUND, StageBackgroundEarly, 0
 >CLEAROPTIONS
 >OPEN
-: A woman with blue hair and a lacy top enters the auditorium. She files her nails as she walks up the stairs, not a care in the world.
+>SETDATA, BandLogoGalleryUnlock, 1
+: A woman with blue hair and a mesh top enters the auditorium. She files her nails as she walks up the stairs, not a care in the world.
 >CHARACTER, Felisha_talksprite_annoyed, L1, 250
 FELISHA: 'Sup, bitches.
 >CHARACTER, Felisha_talksprite_annoyed_close, L1, 0
@@ -360,6 +367,7 @@ RODERICK: I may be an honorable man... but that doesn't mean I'll hold back agai
 >CHARACTER, Roderick_talksprite_angry_close, R2, 0
 >CHARACTER, Kouta_talksprite_happy, L2, 250
 KOUTA: Sorry, what're we doing? I spaced out there.
+>FORCEBANDLOGO
 >SFX, Activate Glyph Forcefield, 500
 >MUSIC, na
 >CHARACTER, na, L1, 500
@@ -446,6 +454,9 @@ FELISHA: Yeah bitches!!!! That's what I'm talking about! I'll step on your face 
 RODERICK: ...Felled by a newcomer. Father... mother... I have failed you.
 >CHARACTER, Roderick_talksprite_failed_close, L1, 0
 >CHARACTER, Kouta_talksprite_failed, L2, 0
+>SETDATA, RoderickGalleryUnlock2, 1
+>SETDATA, KoutaGalleryUnlock, 1
+>SETDATA, FelishaGalleryUnlock1, 1
 KOUTA: Damn it, looks like it's another night to paint myself purple...
 >GOTO, Ch1_20
 
@@ -453,7 +464,7 @@ KOUTA: Damn it, looks like it's another night to paint myself purple...
 >BACKGROUND, StageBackgroundEarly, 500
 >MUSIC, Carpe_Diem, 500
 >OPEN
->CHARACTER, Roderick_talksprite_stoic, L1, 250
+>CHARACTER, Roderick_talksprite_angry, L1, 250
 >CHARACTER, Kouta_talksprite_happy_close, L2, 250
 RODERICK: In the name of my home country, I have vanquished these wenches!
 >CHARACTER, Roderick_talksprite_stoic_close, L1, 0
@@ -462,6 +473,7 @@ KOUTA: Hot damn, we were good! Looks like ya shoulda put on your jumpsocks, Feli
 >CHARACTER, Kouta_talksprite_happy_close, L2, 0
 >CHARACTER, Felisha_talksprite_failed, R2, 250
 >CHARACTER, Maria_talksprite_neutral, R1, 250
+>SETDATA, FelishaGalleryUnlock2, 1
 FELISHA: Fucking hell... I'm aching worse than I was after that frat party...
 >GOTO, Ch1_20
 
@@ -512,6 +524,7 @@ FELISHA: Wait, [Maria], you know this pissboy? Who is he?!
 >CHARACTER, Maria_talksprite_neutral, L1, 250
 >SFX, PUNCH_DESIGNED_HEAVY_74
 >SCREENSHAKE, 500, 500
+>SETDATA, KristophfGalleryUnlock, 1
 [Kristophf, CAPS]: Seriously, you idiots don't know me by this point?! I am [Kristophf] Perrier Delacroix Pellegrino III! Top of my class at Ivytonne Law!
 [Kristophf, CAPS]: I am the lead vocalist of the official Ivytonne University band! These are my groupies! And together, we are... [Kristophf] and the [Kristophf]ettes!
 >CHARACTER, Kristophf_talksprite_angry_close, R1, 0
@@ -547,6 +560,7 @@ RODERICK: Well, sure. But that does not explain how you know [Maria].
 >BACKGROUND, StageBackgroundLate, 500
 >MUSIC, Carpe_Diem, 500
 >OPEN
+>SETDATA, IvytonneBandGalleryUnlock, 1
 >CHARACTER, Eliana_talksprite_happy, L2, 250
 ELIANA: All right! We're on our way to the very top!
 >CHARACTER, Eliana_talksprite_happy_close, L2, 0
@@ -554,9 +568,11 @@ ELIANA: All right! We're on our way to the very top!
 KOUTA: This is just like one of those game shows where the dudes have to compete to take each others' piercings out!
 >CHARACTER, Kouta_talksprite_happy_close, L1, 0
 >CHARACTER, Felisha_talksprite_flirty, L2, 500
+>SETDATA, FelishaGalleryUnlock3, 1
 FELISHA: You're all lucky [Kristophf] was distracted staring at my ass, or y'all never would have won!
 >CHARACTER, Felisha_talksprite_flirty_close, L2, 0
 >CHARACTER, Roderick_talksprite_angry, L1, 500
+>SETDATA, RoderickGalleryUnlock3, 1
 RODERICK: I promise... I will bring that champion's ring home! For the pride of the McNormous family, and the glory of all Canada!
 >MUSIC, Sugar Plum Dark Mix, 750
 >CHARACTER, na, L1, 500
@@ -630,6 +646,7 @@ KOUTA: Yeah, let's hit up some cute local restaurant and just completely trash t
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
 >CHARACTER, Kristophfette2_talksprite_afraid, R1, 0
+>SETDATA, KristophfetteGalleryUnlock, 1
 [Kristophf, CAPS]ETTE: We... we were gonna get married...!
 >CHARACTER, na, R1, 500
 >CHARACTER, na, R2, 500

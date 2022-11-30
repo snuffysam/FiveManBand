@@ -17,6 +17,8 @@ public class NameTypeScript : MonoBehaviour
     public TextMeshProUGUI nameText;
     float blinkTime;
     public TMP_Text bandName1, bandName2;
+    TextBoxControl tbs;
+    bool currentlyRendering = false;
 
     float growSpeed = 6f;
     // Start is called before the first frame update
@@ -33,10 +35,8 @@ public class NameTypeScript : MonoBehaviour
                 GetComponent<DrawingScript>().renderTexCamera.gameObject.SetActive(true);
             } else if (shouldOpen){
                 GetComponent<DrawingScript>().renderTexCamera.gameObject.SetActive(true);
-                GetComponent<DrawingScript>().renderArtCamera.gameObject.SetActive(true);
             } else {
                 GetComponent<DrawingScript>().renderTexCamera.gameObject.SetActive(false);
-                GetComponent<DrawingScript>().renderArtCamera.gameObject.SetActive(false);
             }
         }
 
@@ -66,7 +66,8 @@ public class NameTypeScript : MonoBehaviour
         }
 
         if (shouldOpen && TextBoxControl.replacements != null && TextBoxControl.replacements.ContainsKey(key)){
-            foreach (char c in Input.inputString)
+            string inString = Input.inputString;
+            foreach (char c in inString)
             {
                 AudioSource audioSource = nameText.GetComponent<AudioSource>();
                 if (c == '\b' && TextBoxControl.replacements[key].Length > 0) // has backspace/delete been pressed?
@@ -84,49 +85,9 @@ public class NameTypeScript : MonoBehaviour
                     audioSource.Play();
                 }
             }
-        }
-
-        if ((shouldOpen || (GetComponent<DrawingScript>() != null && !GetComponent<DrawingScript>().controlCamera)) && bandName1 != null && bandName2 != null){
-            int amount = 0;
-            int center = str.Length/2;
-            int indexLower = 0;
-            int indexHigher = str.Length-1;
-
-            for (int i = center; i > 0; i--){
-                if (str[i] == ' '){
-                    indexLower = i;
-                    break;
-                }
+            if (inString.Length > 0 && GetComponent<DrawingScript>() != null){
+                StartRefresh();
             }
-            for (int i = center; i < str.Length; i++){
-                if (str[i] == ' '){
-                    indexHigher = i;
-                    break;
-                }
-            }
-
-            if (center-indexLower <= indexHigher-center){
-                amount = indexLower;
-            } else {
-                amount = indexHigher;
-            }
-
-            if (str.Length == 0){
-                bandName1.text = "";
-                bandName2.text = "";
-            } else {
-                if (amount == 0 || amount == str.Length-1){
-                    bandName1.text = str;
-                    bandName2.text = "";
-                } else {
-                    bandName1.text = str.Substring(0,amount);
-                    bandName2.text = str.Substring(amount);
-                }
-                bandName1.GetComponent<WarpTextExample>().CurveScale = GetCurvature(bandName1.text.Length);
-                bandName2.GetComponent<WarpTextExample>().CurveScale = -GetCurvature(bandName2.text.Length);
-            }
-            Resources.UnloadUnusedAssets();
-            System.GC.Collect();
         }
     }
 
@@ -157,8 +118,56 @@ public class NameTypeScript : MonoBehaviour
                 GetComponent<DrawingScript>().SwitchToNaming();
             }
             shouldOpen = false;
-            FindObjectOfType<TextBoxControl>().GoToLine(goToAfterDone);
+
+            if (GetComponent<DrawingScript>() != null){
+                StartCoroutine(WaitForArtwork());
+            } else {
+                FindObjectOfType<TextBoxControl>().GoToLine(goToAfterDone);
+            }
         }
+    }
+
+    public void StartRefresh(){
+        if (!currentlyRendering){
+            StartCoroutine(RefreshRenderTexture());
+        }
+    }
+
+    IEnumerator RefreshRenderTexture(){
+        currentlyRendering = true;
+        if (tbs == null){
+            tbs = FindObjectOfType<TextBoxControl>();
+        }
+        if (tbs != null){
+            tbs.ResetRenderedTexture();
+
+            while (!tbs.GetRenderedTexture()){
+                yield return new WaitForSeconds(0.1f);
+            }
+
+            TextureStorer textureStore = FindObjectOfType<TextureStorer>();
+            textureStore.storedTexture = textureStore.storedTextureOld;
+
+            tbs.ResetRenderedTexture();
+            
+            while (!tbs.GetRenderedTexture()){
+                yield return new WaitForSeconds(0.01f);
+            }
+        }
+        currentlyRendering = false;
+    }
+
+    IEnumerator WaitForArtwork(){
+        GetComponent<DrawingScript>().StartCapturingArt();
+        GetComponent<DrawingScript>().renderArtCamera.gameObject.SetActive(true);
+
+        while (GetComponent<DrawingScript>().WaitToCaptureArt()){
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        GetComponent<DrawingScript>().renderArtCamera.gameObject.SetActive(false);
+
+        FindObjectOfType<TextBoxControl>().GoToLine(goToAfterDone);
     }
 
     public void SwitchToDrawing(){

@@ -5,7 +5,9 @@ using UnityEngine;
 public class TextureStorer : MonoBehaviour
 {
     public Texture2D storedTexture;
+    public Texture2D storedTextureOld;
     public Texture2D storedArt;
+    public Texture2D storedArtOld;
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);

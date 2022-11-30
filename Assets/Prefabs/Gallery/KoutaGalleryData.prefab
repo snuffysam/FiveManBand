@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &150102014488211415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 392138672517760418, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_Name
+      value: KoutaGalleryData
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: tagline
+      value: '"The Smart Guy"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: description
+      value: After the tragic death of his parents, Kouta was raised by his grandmother,
+        a fiery woman who would never take no for an answer. As a result, Kouta has
+        some unique perceptions on how the world works. He's the composer for all
+        the band's songs, pouring all his emotions into each piece - although, most
+        of the band doesn't really care to learn them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: galleryName
+      value: Kouta Atamanoi
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: unlockConditions
+      value: KoutaGalleryUnlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: a2ba09d238a2848bbb7c1664436abbc1, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d224b9776b0e4463933b6a958b95072, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4776e41b7a97d44fcaff3713496e336d, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 36d5af845eeee4ac1a6271ee07dc40f8, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: cdd375992752d48a3988d0b5b2659712, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d17332bce5014c6bbf6c3e5d3a225a9, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a55acf19eeb24b46a053cd371a6a0e3, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: eba114fbe430d434f9c9ced21d2ff9ae, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 81a5a2f98350244ea8687d15c37b4b89, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 55f769b1a2f084979862028e2f43fdc1, type: 3}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}

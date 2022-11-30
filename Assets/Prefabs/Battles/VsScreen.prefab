@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitBeforeFade: 1
   fadeInTime: 1
-  teleportX: -1200
+  teleportX: -1500
   waitTimeBeforeShake: 0.25
   waitTimeAfterShake: 2
   fadeOutTime: 1
@@ -336,7 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitBeforeFade: 1
   fadeInTime: 1
-  teleportX: 1200
+  teleportX: 1500
   waitTimeBeforeShake: 0.25
   waitTimeAfterShake: 2
   fadeOutTime: 1

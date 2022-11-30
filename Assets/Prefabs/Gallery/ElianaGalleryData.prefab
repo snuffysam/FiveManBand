@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &150102014488211415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 392138672517760418, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_Name
+      value: ElianaGalleryData
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: tagline
+      value: '"The Heart"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: description
+      value: Eliana is a music student at ULRU, trying to get her big break through
+        the Battle of the Five-Man Bands tournament. She recently brought her roommate,
+        [Maria], into the crew. Eliana is always fishing for popularity, in any form.
+        Eliana loves and supports all her friends - though, if she's ever given a
+        solo record deal, the band'll be lucky if they ever see her again!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: galleryName
+      value: Eliana Herzberg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: unlockConditions
+      value: ElianaGalleryUnlock
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 7713306cda0cc4b8f9584fcc34c529da, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b7d28f6710914a7cbdfa6aca774180c, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5184a3a1b0f7b4f94b303c9767f83040, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 68d91273a4183492d80a4cca399a4024, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: db39686e8a0994dfe861b45da03f7f20, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 91423989c2df2469e9b03238a9450f0b, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: de9839d5b8adf4846a812da1b8fbb7b0, type: 3}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}

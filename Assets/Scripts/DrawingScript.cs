@@ -14,6 +14,8 @@ public class DrawingScript : MonoBehaviour
     public GameObject colorButtonParent;
     public bool controlCamera = true;
     Vector3 mousePrev;
+    bool waitingToCaptureArt = false;
+    TextBoxControl tbs;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +29,14 @@ public class DrawingScript : MonoBehaviour
             renderTexCamera.gameObject.SetActive(true);
         } else if (GetComponent<NameTypeScript>().shouldOpen){
             renderTexCamera.gameObject.SetActive(true);
-            renderArtCamera.gameObject.SetActive(true);
         } else {
             renderTexCamera.gameObject.SetActive(false);
-            renderArtCamera.gameObject.SetActive(false);
         }
 
         Vector3 mousePos = renderCamera.ScreenToWorldPoint(Input.mousePosition);
         mousePos = new Vector3(mousePos.x, mousePos.y, 0f)-originObject.transform.position;
+
+        bool spawnedAtLeastOne = false;
 
         if (Input.GetAxis("MouseClick") > 0f && mousePos.magnitude < 2f){
             AudioSource audioSource = colorButtonParent.GetComponent<AudioSource>();
@@ -62,11 +64,12 @@ public class DrawingScript : MonoBehaviour
                     }
 
                     loops++;
-                    Debug.Log("drawing loops: " + loops);
+                    //Debug.Log("drawing loops: " + loops);
                     if (loops > 30){
-                        Debug.Log("too many drawing loops");
+                        //Debug.Log("too many drawing loops");
                         break;
                     }
+                    spawnedAtLeastOne = true;
                     GameObject go = Instantiate<GameObject>(paint,originObject.transform);
                     go.GetComponent<SpriteRenderer>().color = inkColor;
 
@@ -81,6 +84,10 @@ public class DrawingScript : MonoBehaviour
                 Resources.UnloadUnusedAssets();
             }
 
+        }
+
+        if (spawnedAtLeastOne){
+            GetComponent<NameTypeScript>().StartRefresh();
         }
 
         mousePrev = mousePos;
@@ -123,5 +130,19 @@ public class DrawingScript : MonoBehaviour
             }
         }
         Resources.UnloadUnusedAssets();
+        
+        GetComponent<NameTypeScript>().StartRefresh();
+    }
+
+    public void StartCapturingArt(){
+        waitingToCaptureArt = true;
+    }
+
+    public void SetCapturedArt(){
+        waitingToCaptureArt = false;
+    }
+
+    public bool WaitToCaptureArt(){
+        return waitingToCaptureArt;
     }
 }

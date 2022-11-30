@@ -47,6 +47,8 @@ public class MatchStartLogos : MonoBehaviour
                 GetComponent<Image>().color = new Color(c.r, c.g, c.b, alpha);
             }
 
+            Debug.Log(this.gameObject.name + ": " + rectTransform.localPosition.x + ", " + startX);
+
             if (timer > fadeInTime){
                 timer = 0f;
                 mode = 1;
@@ -69,6 +71,7 @@ public class MatchStartLogos : MonoBehaviour
                 mode = 3;
             }
         } else if (mode == 4){
+            rectTransform.localPosition = new Vector3(teleportX, rectTransform.localPosition.y, rectTransform.localPosition.z);
             if (timer > waitBeforeFade){
                 timer = 0f;
                 mode = 0;

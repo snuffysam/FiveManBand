@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &150102014488211415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 392138672517760418, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_Name
+      value: FelishaGalleryData
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: tagline
+      value: '"The Lancer"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: description
+      value: Felisha is the self-made, self-proclaimed hottest student at Upper Lake
+        River University. The other students at the school aren't sure whether they
+        want her or fear her - most likely, both. She's in a long-term committed
+        relationship with someone or other, but that won't stop her from turning
+        up the charm in battle!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: galleryName
+      value: Felisha Rebelle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: unlockConditions
+      value: FelishaGalleryUnlock1, FelishaGalleryUnlock2, FelishaGalleryUnlock3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d5574509e61e4d85909b9c5f32c9d54, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 71a101e40fd19427e8d15a574c4e70a7, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 12e0a54871b884d77a3275ce2c9466b9, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bcce360879194559a1330f88853050f, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0092c47a4aa8048bd948cf23fdea4eca, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4cac2fb29841145228c13dd2a9a05efb, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 318fb22d6c9dc4c2dadb29edac76f000, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: aa9b9b1c5c9394e9390d23675e06dfaf, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: e4ad6b122e79145269dea57185a12078, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: e8e5ac6a679664f06b2f2deb81dbcb0c, type: 3}
+    - target: {fileID: 6773125598700275600, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: allSprites.Array.data[10]
+      value: 
+      objectReference: {fileID: 21300000, guid: d78031440b3764c19997fab5e8a1b1a3, type: 3}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7388300016361910923, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e9d88e303c34fada155a98894bc2d0, type: 3}
