@@ -114,7 +114,7 @@ public class SaveSerial : MonoBehaviour
             //Debug.Log("got file");
             TextBoxControl.replacements = data.replacements;
             TextBoxControl.gameData = data.gameData;
-            Debug.Log("Loaded Game Data");
+            //Debug.Log("Loaded Game Data");
             TextBoxControl.adventureLog = data.adventureLog;
             TextBoxControl.autoplayEnabled = data.autoplayEnabled;
             TextBoxControl.musicVolume = data.musicVolume;
@@ -130,7 +130,7 @@ public class SaveSerial : MonoBehaviour
                     textureStorer.storedArt = new Texture2D(512, 512);
                 }
                 ImageConversion.LoadImage(textureStorer.storedArt, data.bandLogo, false); 
-                Debug.Log("Set Stored Texture");
+                //Debug.Log("Set Stored Texture");
                 //textureStorer.storedArt = new Texture2D (textureStorer.storedArt.width, textureStorer.storedArt.height);
                 //textureStorer.storedArt.LoadRawTextureData (data.bandLogo);
                 GetStoredTexture gts = FindObjectOfType<GetStoredTexture>();

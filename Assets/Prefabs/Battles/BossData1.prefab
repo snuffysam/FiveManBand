@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
       propertyPath: AIDelay
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5747577153169543374, guid: b5fe5b0503c454f1b9087b6fd8250e6d, type: 3}
       propertyPath: winGoTo

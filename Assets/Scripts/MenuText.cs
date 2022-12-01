@@ -77,6 +77,19 @@ public class MenuText : MonoBehaviour
             GameObject go = new GameObject("Battle Message");
             go.AddComponent<BattleMessage>().message = "LOAD DATA";
         }
+        TextBoxControl.cleanMode = false;
+        //Debug.Log("ready for coroutine");
+        StartCoroutine(PlayGameCO());
+    }
+
+    public void PlayGameClean(){
+        if (SaveSerial.HasSaveFile()){
+            //Debug.Log("found save file");
+            //saveSerial.LoadGame();
+            GameObject go = new GameObject("Battle Message");
+            go.AddComponent<BattleMessage>().message = "LOAD DATA";
+        }
+        TextBoxControl.cleanMode = true;
         //Debug.Log("ready for coroutine");
         StartCoroutine(PlayGameCO());
     }

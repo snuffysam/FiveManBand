@@ -21,15 +21,21 @@ public class PickOption : MonoBehaviour
     void Update()
     {
         if (tbc.CanInteract() && !TextBoxControl.GetData(DisableOnBool)){
-            button.enabled = true;
+            if (button != null){
+                button.enabled = true;
+            }
             if (TextBoxControl.GetData(HideOnBool)){
-                button.enabled = false;
+                if (button != null){
+                    button.enabled = false;
+                }
                 GetComponent<Image>().enabled = false;
             } else {
                 GetComponent<Image>().enabled = true;
             }
         } else {
-            button.enabled = false;
+            if (button != null){
+                button.enabled = false;
+            }
             if (TextBoxControl.GetData(HideOnBool)){
                 GetComponent<Image>().enabled = false;
             } else {

@@ -882,6 +882,7 @@ MonoBehaviour:
   FadeImage: {fileID: 408452738}
   optionsMenu: {fileID: 1759464226}
   renderTexCamera: {fileID: 2135744187}
+  currentStoredTexture: {fileID: 0}
 --- !u!114 &659703826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,6 +1079,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 659703825}
+        m_TargetAssemblyTypeName: MenuText, Assembly-CSharp
+        m_MethodName: PlayGameClean
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768681349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1170,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: Extras
+            m_StringArgument: Story Mode (Clean Ver.)
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 768681354}

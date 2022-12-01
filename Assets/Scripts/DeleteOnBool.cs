@@ -17,7 +17,7 @@ public class DeleteOnBool : MonoBehaviour
     {
         timer += Time.deltaTime;
         if (timer > delayTimer && !TextBoxControl.GetData(boolToCheck)){
-            Debug.Log("Deleted");
+            //Debug.Log("Deleted");
             Destroy(this.gameObject);
         }
     }

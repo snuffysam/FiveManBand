@@ -20,7 +20,7 @@ public class CopyRenderTexture : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("I Exist!");
+        //Debug.Log("I Exist!");
         StartCoroutine(TakeSnapshot());
     }
 

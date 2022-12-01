@@ -37,6 +37,8 @@ public class TextBoxControl : MonoBehaviour
     public static float autoplayDelay = 1.5f;
     public static string textSoundName;
     public static int textSoundMaxIndex;
+    public static bool cleanMode;
+    public static List<string> badWords;
 
     bool textBoxActive = false;
     float growSpeed = 2.5f;
@@ -74,6 +76,7 @@ public class TextBoxControl : MonoBehaviour
             replacements.Add("Maria", "Maria");
             replacements.Add("Pines Masters", "Pines Masters");
             replacements.Add("Kristophf", "Kristophf");
+            replacements.Add(";", ",");
         }
 
         if (gameData == null){
@@ -82,6 +85,65 @@ public class TextBoxControl : MonoBehaviour
 
         if (recordTimes == null){
             recordTimes = new Dictionary<string, float>();
+        }
+
+        if (badWords == null){
+            badWords = new List<string>();
+            badWords.Add("energy");
+            badWords.Add("conquer");
+            badWords.Add("visit");
+            badWords.Add(" car ");
+            badWords.Add(" car?");
+            badWords.Add("breathe");
+            badWords.Add("treat");
+            badWords.Add("fuck");
+            badWords.Add("play guitar");
+            badWords.Add("string parts");
+            badWords.Add("play");
+            badWords.Add("hell ");
+            badWords.Add("hell,");
+            badWords.Add("hell.");
+            badWords.Add("hell?");
+            badWords.Add("chew");
+            badWords.Add("stupid");
+            badWords.Add("pocket");
+            badWords.Add("pants");
+            badWords.Add("pines");
+            badWords.Add("clothes");
+            badWords.Add("tummy");
+            badWords.Add("tittie");
+            badWords.Add("girls gone wild");
+            badWords.Add("Girls Gone Wild");
+            badWords.Add("boob");
+            badWords.Add("bitch");
+            badWords.Add("in bed");
+            badWords.Add("omelette");
+            badWords.Add("sexy");
+            badWords.Add("sex");
+            badWords.Add("step");
+            badWords.Add("face");
+            badWords.Add("cry");
+            badWords.Add("damn");
+            badWords.Add("paint");
+            badWords.Add("vanquish");
+            badWords.Add("frat party");
+            badWords.Add("kick");
+            badWords.Add("butt");
+            badWords.Add("shit");
+            badWords.Add("piss");
+            badWords.Add("idiot");
+            badWords.Add("groupie");
+            badWords.Add("bozo");
+            badWords.Add("cunt");
+            badWords.Add("piercing");
+            badWords.Add(" ass,");
+            badWords.Add("weirdo");
+            badWords.Add("slut");
+            badWords.Add("organ");
+            badWords.Add("trash");
+            badWords.Add("marri");
+            badWords.Add("practice");
+            badWords.Add("nike");
         }
 
         saveSerial = FindObjectOfType<SaveSerial>();
@@ -256,6 +318,9 @@ public class TextBoxControl : MonoBehaviour
             StartCoroutine(funcName, parms);
         } else {
             lineEx = ReplaceText(lineEx);
+            if (cleanMode){
+                lineEx = CensorLine(lineEx);
+            }
             adventureLog.Add(lineEx);
             currentName = lineEx.Split(": ")[0];
             int startIndex = currentName.Length+2;
@@ -404,7 +469,12 @@ public class TextBoxControl : MonoBehaviour
             im = right2;
         }
 
-        im.GetComponent<ImageDisplayer>().SwapSprite("Talksprites/" + parms[0], milliseconds/1000f);
+        string suffix = "";
+        if (cleanMode && parms[0].Contains("Felisha")){
+            suffix = "_censored";
+        }
+
+        im.GetComponent<ImageDisplayer>().SwapSprite("Talksprites/" + parms[0] + suffix, milliseconds/1000f);
 
         ExecuteLine();
     }
@@ -613,6 +683,16 @@ public class TextBoxControl : MonoBehaviour
         ExecuteLine();
     }
 
+    IEnumerator CLEANLINE(string[] parms){
+        yield return new WaitForSeconds(0f);
+        
+        if (cleanMode){
+            fullScript[currentLine+1] = parms[0];
+        }
+
+        ExecuteLine();
+    }
+
     string ReplaceText(string original){
         int indexHigh = original.IndexOf("]");
         int indexLow = indexHigh;
@@ -696,6 +776,43 @@ public class TextBoxControl : MonoBehaviour
         int index = int.Parse(parms[1]);
         int length = int.Parse(parms[2]);
         return parms[0].Substring(index, length);
+    }
+
+    public string CensorLine(string lineIn){
+        foreach (string badWord in badWords){
+            int wordIndex = lineIn.ToLower().IndexOf(badWord);
+            while (wordIndex >= 0){
+                string toReplace = GenerateGrawlixes(badWord);
+                lineIn = lineIn.Substring(0,wordIndex) + toReplace + lineIn.Substring(wordIndex+badWord.Length);
+                wordIndex = lineIn.ToLower().IndexOf(badWord);
+            }
+        }
+
+        return lineIn;
+    }
+
+    public string GenerateGrawlixes(string badWord){
+        char[] replaceChar = new char[]{'#','@','!','$','%','&','*'};
+
+        List<char> weightedChars = new List<char>();
+        for (int i = 0; i < badWord.Length*4/replaceChar.Length; i++){
+            foreach (char c in replaceChar){
+                weightedChars.Add(c);
+            }
+        }
+
+        string toReplace = "";
+        for (int i = 0; i < badWord.Length; i++){
+            if (badWord[i] == ' ' || badWord[i] == ',' || badWord[i] == '.' || badWord[i] == '?'){
+                toReplace += badWord[i];
+            } else {
+                int index = Random.Range(0,weightedChars.Count);
+                char c = weightedChars[index];
+                weightedChars.RemoveAt(index);
+                toReplace += c;
+            }
+        }
+        return toReplace;
     }
 
     bool isVowel (char c){
@@ -841,7 +958,7 @@ public class TextBoxControl : MonoBehaviour
 
     public bool GetRenderedArtTexture(){
         if (FindObjectOfType<DeleteWithoutSave>() == null){
-            Debug.Log("no delete without save?");
+            //Debug.Log("no delete without save?");
             return true;
         }
         return didRenderArtTexture;

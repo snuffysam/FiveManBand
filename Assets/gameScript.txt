@@ -1,6 +1,7 @@
 ﻿@Ch1_1
 >SETDATA, HideRoderick2, 1
 >SETDATA, DisableBolts, 1
+>SETDATA, HideBoltHighlight, 1
 >SETDATA, ClickedRoderick, 0
 >SETDATA, CollectedBolts, 0
 >SETDATA, ClickedPurse, 0
@@ -15,6 +16,7 @@
 >CHARACTER, na, R2, 0
 >TYPESFX, Narrator, 0
 >OPEN
+>CLEANLINE, : Due to several letters from concerned parents[;] the following content has been modified to be suitable for all ages.
 : The following content is intended for 18+ audiences only, due to mature language and scenarios.
 >CLOSE
 >MUSIC, Tempting Secrets, 500
@@ -124,6 +126,7 @@ RODERICK: I am Roderick, eldest son of the McNormous line! I left my home countr
 RODERICK: I would fix it myself, of course, but my fingers are too strong and muscular to handle the bolts. This requires a delicate touch...
 >SETDATA, ClickedRoderick, 1
 >SETDATA, DisableBolts, 0
+>SETDATA, HideBoltHighlight, 0
 >CHARACTER, na, L1, 500
 >CHARACTER, na, L2, 500
 >CHARACTER, na, R1, 500
@@ -133,6 +136,7 @@ RODERICK: I would fix it myself, of course, but my fingers are too strong and mu
 @Ch1_4
 >SETDATA, HideRoderick2, 0
 >SETDATA, CollectedBolts, 1
+>SETDATA, HideBoltHighlight, 1
 >OPEN
 >SFX, COINS_PLACED_DOWN_HARDCOVER_PITCHED
 : [Maria] got 4 BOLTS!
@@ -424,7 +428,7 @@ ELIANA: Of course, what would a Battle of the Bands be without some dirty fighti
 ELIANA: You can use the Attack skill to attack Roderick & Kouta, and the Defend skill to protect yourself against their attacks!
 ELIANA: You can ignore the other band if you want, but keep in mind – if you lose all of your hearts, you won't be able to play anymore!
 >CHARACTER, na, R1, 500
->TUTORIALSET, Ch1_17, false, false, true, true, 30000, false
+>TUTORIALSET, Ch1_17, false, false, true, true, 1500, false
 >CLOSE
 
 @Ch1_17
@@ -436,7 +440,7 @@ ELIANA: You can ignore the other band if you want, but keep in mind – if you l
 ELIANA: That's it! You've got it!
 ELIANA: Well, I think that's all you need to know! Go ahead and win that Battle!
 >CHARACTER, na, R1, 500
->TUTORIALSET, , true, true, true, true, 40000, false
+>TUTORIALSET, , true, true, true, true, 2000, false
 >CLOSE
 
 @Ch1_18

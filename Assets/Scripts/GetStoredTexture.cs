@@ -40,17 +40,17 @@ public class GetStoredTexture : MonoBehaviour
         }
 
         if (artTexture){
-            Debug.Log("searching A");
+            //Debug.Log("searching A");
         }
 
         if (artTexture && tex != null){
             if (tbc != null && (tbc.GetRenderedTexture() || true)){
                 tbc.SetRenderedArtTexture();
-                Debug.Log("Stopped refreshing art texture!");
+                //Debug.Log("Stopped refreshing art texture!");
                 return;
             }
             if (!shouldGetTexture){
-                Debug.Log("Skipped getting art texture!");
+                //Debug.Log("Skipped getting art texture!");
                 //shouldGetTexture = true;
                 return;
             }
@@ -58,7 +58,7 @@ public class GetStoredTexture : MonoBehaviour
         }
         
         if (artTexture){
-            Debug.Log("searching B");
+            //Debug.Log("searching B");
         }
 
         if (storer.storedTexture != null){

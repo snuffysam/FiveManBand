@@ -213,6 +213,8 @@ public class BattleRunner : MonoBehaviour
             return;
         }
 
+        enemyAITimer = 0f;
+
         if (enemyInProgress){
             return;
         }
